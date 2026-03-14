@@ -1,0 +1,65 @@
+---
+import { Image } from 'astro:assets';
+import logoPic from '../assets/images/logo.png';
+---
+
+<header class="fixed top-0 w-full bg-teal-deep z-50 border-b border-teal/20">
+  <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-teal-deep rounded">
+      <span class="font-serif text-white text-2xl italic tracking-wide">Nyres Edim</span>
+    </a>
+
+    <!-- Desktop nav -->
+    <ul class="hidden md:flex items-center gap-8 text-sm font-medium list-none">
+      <li><a href="#sobre" class="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Sobre</a></li>
+      <li><a href="#metodo" class="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Pathwork®</a></li>
+      <li><a href="#como-funciona" class="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Como Funciona</a></li>
+      <li><a href="#depoimentos" class="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Depoimentos</a></li>
+      <li><a href="#faq" class="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">FAQ</a></li>
+      <li>
+        <a href="#contato" class="bg-sand text-brown px-5 py-2.5 rounded-full hover:bg-sand/90 transition-colors focus:outline-none focus:ring-2 focus:ring-sand focus:ring-offset-2 focus:ring-offset-teal-deep">
+          Agende uma Consulta
+        </a>
+      </li>
+    </ul>
+
+    <!-- Mobile hamburger -->
+    <button id="menu-toggle" class="md:hidden text-white/80 hover:text-white bg-transparent border-none p-1 focus:outline-none" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobile-menu">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <nav id="mobile-menu" class="hidden md:hidden bg-teal-deep border-t border-teal/20 px-6 pb-5" aria-label="Menu mobile">
+    <ul class="flex flex-col gap-4 text-sm font-medium list-none">
+      <li><a href="#sobre" class="text-white/80 hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">Sobre</a></li>
+      <li><a href="#metodo" class="text-white/80 hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">Pathwork®</a></li>
+      <li><a href="#como-funciona" class="text-white/80 hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">Como Funciona</a></li>
+      <li><a href="#depoimentos" class="text-white/80 hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">Depoimentos</a></li>
+      <li><a href="#faq" class="text-white/80 hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">FAQ</a></li>
+      <li>
+        <a href="#contato" class="inline-block bg-sand text-brown px-5 py-2.5 rounded-full text-center focus:outline-none focus:ring-2 focus:ring-sand focus:ring-offset-2 focus:ring-offset-teal-deep">
+          Agende uma Consulta
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  toggle?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+    const isOpen = !menu?.classList.contains('hidden');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+  menu?.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      menu?.classList.add('hidden');
+      toggle?.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>

@@ -1,0 +1,153 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Nyres Edim | Terapeuta Pathwork® — Autoconhecimento e Espiritualidade",
+  description = "Transforme padrões emocionais com o Método Pathwork®. Mais de 25 anos de experiência. Atendimento individual e grupos de estudos. Presencial em BH e online."
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content={description} />
+  <title>{title}</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nyresedim.com.br" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:image" content="https://nyresedim.com.br/images/foto-profissional-1.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content="https://nyresedim.com.br/images/foto-profissional-1.jpg" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "additionalType": "https://schema.org/Therapist",
+      "name": "Nyres Edim",
+      "jobTitle": "Terapeuta Pathwork®",
+      "description": "Terapeuta Pathwork® com mais de 25 anos de experiência em autoconhecimento e espiritualidade. Atendimento individual e grupos de estudos em Belo Horizonte e online.",
+      "url": "https://nyresedim.com.br",
+      "telephone": "+55 31 98585-0589",
+      "image": "https://nyresedim.com.br/images/foto-profissional-1.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua dos Dominicanos 165, sala 301",
+        "addressLocality": "Belo Horizonte",
+        "addressRegion": "MG",
+        "addressCountry": "BR",
+        "neighborhood": "Serra"
+      },
+      "knowsAbout": ["Pathwork®", "Autoconhecimento", "Espiritualidade", "Terapia Individual", "Grupos de Estudos"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Nyres Edim — Terapeuta Pathwork®",
+      "description": "Consultório de terapia Pathwork® em Belo Horizonte. Sessões individuais e grupos de estudos para autoconhecimento e transformação pessoal.",
+      "url": "https://nyresedim.com.br",
+      "telephone": "+55 31 98585-0589",
+      "image": "https://nyresedim.com.br/images/foto-profissional-1.jpg",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua dos Dominicanos 165, sala 301",
+        "addressLocality": "Belo Horizonte",
+        "addressRegion": "MG",
+        "addressCountry": "BR",
+        "neighborhood": "Serra"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -19.9332,
+        "longitude": -43.9266
+      }
+    }
+  ])} />
+
+  <!-- Fonts: Cormorant Garamond (elegant serif) + Lato (clean sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;700&display=swap" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- Preload hero image -->
+  <link rel="preload" href="/images/foto-profissional-1.jpg" as="image" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://nyresedim.com.br" />
+
+  <style>
+    @import "../styles/global.css";
+  </style>
+  <style is:global>
+    a { text-decoration: none; }
+  </style>
+</head>
+<body class="font-sans text-dark bg-cream">
+  <slot />
+
+  <script>
+    // Respect prefers-reduced-motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .stagger');
+
+    if (prefersReducedMotion) {
+      // Show all elements immediately without animation
+      revealElements.forEach(el => el.classList.add('visible'));
+    } else {
+      // Scroll reveal observer
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
+
+    // Header scroll effect
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header?.classList.add('header-scrolled');
+      } else {
+        header?.classList.remove('header-scrolled');
+      }
+    });
+
+    // Smooth scroll for anchor links (with offset for fixed header)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(anchor.getAttribute('href')!);
+        if (target) {
+          const offset = 80; // header height
+          const top = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

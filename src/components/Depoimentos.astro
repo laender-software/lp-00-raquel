@@ -1,0 +1,43 @@
+---
+const depoimentos = [
+  {
+    texto: "Tenho encontrado no grupo de Pathwork® uma maneira de compreender melhor o funcionamento do nosso ego. Os encontros semanais estão me proporcionando um crescimento maravilhoso! Obrigada Nyres por todo seu conhecimento e dedicação!",
+    autor: "M.B."
+  },
+  {
+    texto: "Conhecer o Pathwork® e fazer parte do grupo de estudos foi muito transformador e libertador! É um grande trabalho de autoconhecimento, onde cada um vai no seu ritmo mas, ao mesmo tempo, nos impulsionamos através dos compartilhamentos. É um caminho sem volta, sem fim!",
+    autor: "T.S."
+  },
+  {
+    texto: "No grupo de estudos do Pathwork®, por meio do compartilhamento das experiências das almas ali presentes, consegui compreender a dinâmica dos acontecimentos na minha vida, e sentir a grandiosidade de Deus, e que Ele está em tudo, inclusive em mim, o tempo todo.",
+    autor: "M.R."
+  },
+  {
+    texto: "O Pathwork® foi como uma lanterna de luz suave que iluminava — e ilumina — cada pequeno passo na exploração do interior da minha caverna escura. Obrigada, Nyres, pela maestria e por tanta generosidade ao caminhar comigo nessa jornada.",
+    autor: "L.P."
+  }
+];
+---
+
+<section class="py-16 md:py-28 bg-warm" id="depoimentos">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16 reveal">
+      <p class="text-teal-deep font-bold text-lg uppercase tracking-[0.2em] mb-3">Depoimentos</p>
+      <h2 class="font-serif text-3xl md:text-4xl font-semibold text-brown">
+        O que dizem sobre o meu trabalho
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 stagger">
+      {depoimentos.map((dep) => (
+        <div class="card-lift bg-cream rounded-2xl p-8 shadow-sm border border-sand/30">
+          <svg class="w-8 h-8 text-sand mb-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+          </svg>
+          <p class="text-brown-light leading-relaxed mb-6 italic font-serif text-lg">"{dep.texto}"</p>
+          <p class="font-semibold text-teal-deep">— {dep.autor}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

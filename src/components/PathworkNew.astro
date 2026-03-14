@@ -1,0 +1,128 @@
+---
+import { Image } from 'astro:assets';
+import pathworkPic from '../assets/images/foto-profissional-2.jpg';
+---
+
+<section class="py-16 md:py-28 bg-teal-deep text-white overflow-hidden" id="metodo">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+
+      <!-- Text column -->
+      <div class="reveal-left">
+        <p class="text-teal-light font-medium text-sm uppercase tracking-[0.2em] mb-3">O Pathwork®</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-semibold mb-6">
+          O que é o Pathwork®?
+        </h2>
+
+        <div class="space-y-4 text-teal-soft leading-relaxed">
+          <!-- Parágrafo 1 — sempre visível -->
+          <p>
+            <strong class="text-white">Pathwork®</strong> é o nome dado a um método de autoconhecimento e autotransformação que envolve aspectos psicológicos e espirituais. Sua tradução literal é <strong class="text-sand">TRABALHO DO CAMINHO</strong>.
+          </p>
+
+          <!-- Parágrafo 2 NOVO — sempre visível -->
+          <p>
+            Este Método é a base principal que fundamenta o meu trabalho com o desenvolvimento humano.
+          </p>
+
+          <!-- Princípio em destaque — sempre visível -->
+          <div class="bg-white/10 border border-white/20 rounded-xl p-5 mt-2">
+            <p class="text-white font-medium leading-relaxed">
+              O Pathwork® parte de um princípio fundamental: <span class="text-sand italic">não estamos aqui para nos adaptar à dor ou simplesmente sobreviver — estamos aqui para nos tornar plenamente quem somos.</span>
+            </p>
+          </div>
+
+          <!-- Toggle: história do Pathwork -->
+          <details class="group pathwork-details">
+            <summary class="flex items-center gap-3 cursor-pointer py-3 px-5 bg-white/10 border border-white/20 rounded-xl text-sand font-semibold text-base tracking-wide hover:bg-white/15 hover:text-white transition-all focus:outline-none focus:ring-2 focus:ring-sand focus:ring-offset-1 focus:ring-offset-teal-deep list-none mt-2">
+              <span class="flex-1">Saiba mais sobre a história do Pathwork®</span>
+              <svg class="w-5 h-5 flex-shrink-0 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </summary>
+
+            <div class="pathwork-details-body overflow-hidden">
+              <div class="pt-3 space-y-4 text-teal-soft leading-relaxed">
+                <p>
+                  Os ensinamentos do Pathwork® revelam, com grande precisão, o funcionamento da mente humana, das emoções, das crenças inconscientes e da forma como criamos nossas próprias experiências de vida. Revela, também, o potencial que fica bloqueado por estas questões da personalidade e nos conduz por um maravilhoso processo de despertar espiritual.
+                </p>
+                <p>
+                  Tudo isso está contido em um conjunto de <strong class="text-white">258 textos</strong>, que foram necessários <strong class="text-white">22 anos</strong> para serem concluídos. Transmitidos de 1957 a 1979, nos Estados Unidos, através da mediunidade de <strong class="text-white">Eva Pierrakos</strong> — uma austríaca que deu voz a um ser espiritual conhecido como o Guia do Pathwork® — e são conhecidos como Palestras do Guia do Pathwork®.
+                </p>
+                <p>
+                  Desde então estes ensinamentos têm sido transmitidos por pessoas que passam por um longo processo de estudo e qualificação regulamentado pela <strong class="text-white">International Pathwork Foundation</strong>, marca registrada criada para proteger a integridade do conteúdo e responsável por sua divulgação.
+                </p>
+                <p>
+                  E esse processo começa quando temos disposição para olhar para dentro de nós mesmos e buscar o que motiva os nossos comportamentos. Ao trazer à consciência aquilo que normalmente permanece oculto, no inconsciente, torna-se possível transformar padrões que limitam a vida e abrir espaço para mais verdade, liberdade interior, vitalidade e realização.
+                </p>
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <!-- Bullet list — sempre visível -->
+        <div class="mt-8">
+          <p class="text-teal-light font-semibold text-sm uppercase tracking-wide mb-4">Com o Pathwork® você pode:</p>
+          <ul class="space-y-3" aria-label="Benefícios do Pathwork®">
+            {[
+              "Reconhecer e curar padrões inconscientes muito profundos",
+              "Romper com a dependência emocional e criar relações maduras, livres e conscientes",
+              "Se reconectar com sua força, sua verdade e sua essência espiritual",
+              "Liberar a energia que ficou presa nos seus próprios bloqueios emocionais",
+            ].map(item => (
+              <li class="flex items-start gap-3 text-teal-soft">
+                <span class="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-sand/30 flex items-center justify-center" aria-hidden="true">
+                  <svg class="w-3 h-3 text-sand" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                </span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+          <a href="#contato" class="btn-glow bg-sand text-brown px-8 py-4 rounded-full font-semibold text-center hover:bg-sand/90 transition-all shadow-lg focus:outline-none focus:ring-2 focus:ring-teal-deep focus:ring-offset-2">
+            Quero saber mais
+          </a>
+          <a href="#como-funciona" class="btn-glow border-2 border-teal-light text-teal-light px-8 py-4 rounded-full font-semibold text-center hover:bg-teal-light/10 transition-all focus:outline-none focus:ring-2 focus:ring-teal-deep focus:ring-offset-2">
+            Ver o processo
+          </a>
+        </div>
+      </div>
+
+      <!-- Photo -->
+      <div class="reveal-right flex justify-center">
+        <div class="group w-72 md:w-80 rounded-2xl overflow-hidden shadow-2xl">
+          <Image
+            src={pathworkPic}
+            alt="Nyres Edim — sessão Pathwork®"
+            class="w-full h-full object-cover transition-transform duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
+            loading="lazy"
+            widths={[320, 480, 640]}
+            sizes="(max-width: 768px) 288px, 320px"
+          />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Reset list-style for summary in all browsers */
+  .pathwork-details summary::-webkit-details-marker { display: none; }
+
+  /* Animated expand/collapse */
+  .pathwork-details-body {
+    max-height: 0;
+    transition: max-height 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease;
+    opacity: 0;
+  }
+
+  details[open] .pathwork-details-body {
+    max-height: 800px;
+    opacity: 1;
+  }
+</style>

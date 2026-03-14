@@ -1,0 +1,47 @@
+---
+const perguntas = [
+  {
+    pergunta: "O que é o Pathwork®?",
+    resposta: "O Pathwork® é um método de autoconhecimento profundo que integra psicologia e espiritualidade, ajudando você a reconhecer e transformar padrões inconscientes para viver com mais clareza, liberdade e maturidade emocional."
+  },
+  {
+    pergunta: "Preciso ter uma religião específica para fazer o Pathwork®?",
+    resposta: "Não. O Pathwork® não é uma religião e não exige que você siga ou abandone qualquer crença. É um trabalho de autoconhecimento e expansão de consciência que pode ser praticado por pessoas de todas as religiões — ou sem religião — respeitando sempre sua fé e seus valores pessoais."
+  },
+  {
+    pergunta: "Qual a duração das sessões?",
+    resposta: "As sessões individuais têm duração de aproximadamente 1 hora, com frequência semanal. Os grupos de estudos têm encontros semanais com duração similar."
+  },
+  {
+    pergunta: "O que é o grupo de estudos?",
+    resposta: "O grupo de estudos do Pathwork® é um espaço de encontro — com o outro e consigo mesmo — onde você estuda o conteúdo e vivencia os ensinamentos. O grupo te ajuda a enxergar o que sozinho não consegue ver — resistências, defesas e também sua beleza e potencial. É um espaço de acolhimento, compreensão e crescimento, onde nascem vínculos verdadeiros e transformadores entre os participantes."
+  }
+];
+---
+
+<section class="py-16 md:py-28 bg-cream" id="faq">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="text-center mb-16 reveal">
+      <p class="text-teal-deep font-bold text-lg uppercase tracking-[0.2em] mb-3">Dúvidas</p>
+      <h2 class="font-serif text-3xl md:text-4xl font-semibold text-brown">
+        Dúvidas Frequentes
+      </h2>
+    </div>
+
+    <div class="space-y-4">
+      {perguntas.map((item, i) => (
+        <details class="reveal group bg-warm rounded-xl border border-sand/30 overflow-hidden" style={`transition-delay: ${i * 50}ms`}>
+          <summary class="flex items-center justify-between cursor-pointer px-6 py-5 font-semibold text-brown hover:text-teal-deep transition-colors focus:outline-none focus:ring-2 focus:ring-teal-deep focus:ring-inset rounded-xl">
+            {item.pergunta}
+            <svg class="w-5 h-5 text-teal flex-shrink-0 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-5 text-brown-light leading-relaxed">
+            {item.resposta}
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

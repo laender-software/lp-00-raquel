@@ -1,0 +1,87 @@
+---
+const dores = [
+  {
+    titulo: "Falta de autovalorização",
+    items: [
+      "Sensação persistente de não ser suficiente, mesmo reconhecendo suas qualidades",
+      "Autoexigência excessiva e dificuldade de acolher a si mesmo",
+      "Tendência a se calar ou se retrair para evitar críticas ou rejeição"
+    ]
+  },
+  {
+    titulo: "Padrões repetitivos nos relacionamentos",
+    items: [
+      "Atração por relações que geram insegurança ou medo de abandono",
+      "Dificuldade em se abrir de forma autêntica, temendo se machucar",
+      "Sentimento de estar preso(a) aos mesmos conflitos e dinâmicas"
+    ]
+  },
+  {
+    titulo: "Desalinhamento com seu propósito",
+    items: [
+      "Sensação de viver no \"piloto automático\"",
+      "Dificuldade em enxergar novas possibilidades ou acreditar nelas",
+      "Falta de energia e motivação para agir em direção à vida que deseja"
+    ]
+  },
+  {
+    titulo: "Ansiedade e medo constantes",
+    items: [
+      "Preocupação excessiva com o futuro, como se algo ruim estivesse sempre prestes a acontecer",
+      "Angústia persistente de estar esquecendo algo importante ou de ter feito algo errado"
+    ]
+  },
+  {
+    titulo: "Culpa e autocrítica intensa",
+    items: [
+      "Culpa por não reagir como \"todo mundo consegue\"",
+      "Vergonha por sentir demais ou por precisar de ajuda",
+      "Dificuldade em se perdoar por erros ou escolhas do passado"
+    ]
+  },
+  {
+    titulo: "Cansaço profundo",
+    items: [
+      "Sensação de estar sempre exausto(a), até emocionalmente",
+      "Pequenas tarefas parecem pesadas e sem sentido",
+      "Corpo e mente lentos, como se algo estivesse bloqueando a energia vital"
+    ]
+  }
+];
+---
+
+<section class="py-16 md:py-28 bg-warm" id="dores">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16 reveal">
+      <p class="text-teal-deep font-bold text-lg uppercase tracking-[0.2em] mb-3">Você se identifica?</p>
+      <h2 class="font-serif text-3xl md:text-4xl font-semibold text-brown mb-4">
+        Sensação de estagnação, dificuldade de mudar padrões...
+      </h2>
+      <p class="text-brown-light text-lg max-w-2xl mx-auto">
+        Se esse é o seu caso, é provável que também perceba:
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 stagger">
+      {dores.map((dor) => (
+        <div class="card-lift bg-cream rounded-2xl p-8 shadow-sm border border-sand/30">
+          <h3 class="font-serif text-xl font-semibold text-teal-deep mb-4">{dor.titulo}</h3>
+          <ul class="space-y-2">
+            {dor.items.map(item => (
+              <li class="text-brown-light text-sm leading-relaxed flex gap-2">
+                <span class="text-teal mt-1 flex-shrink-0">•</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-12 reveal">
+      <a href="#contato" class="btn-glow bg-teal-deep text-white px-8 py-4 rounded-full font-semibold hover:bg-teal transition-all shadow-lg inline-block focus:outline-none focus:ring-2 focus:ring-teal-deep focus:ring-offset-2">
+        Agende uma Consulta
+      </a>
+    </div>
+  </div>
+</section>
