@@ -1,153 +1,102 @@
 ---
+import '../styles/global.css';
+
 interface Props {
   title?: string;
   description?: string;
+  canonical?: string;
+  ogImage?: string;
 }
 
 const {
-  title = "Nyres Edim | Terapeuta Pathwork® — Autoconhecimento e Espiritualidade",
-  description = "Transforme padrões emocionais com o Método Pathwork®. Mais de 25 anos de experiência. Atendimento individual e grupos de estudos. Presencial em BH e online."
+  title = 'Dra. Raquel Cosso — Endocrinologista',
+  description = 'Endocrinologista com atendimento humanizado e personalizado. Especialidades: tireoide, diabetes, obesidade, SOP, menopausa e mais. Agende sua consulta.',
+  canonical = 'https://raquelcosso.com.br',
+  ogImage = '/og-image.jpg',
 } = Astro.props;
 ---
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content={description} />
-  <title>{title}</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content={title} />
-  <meta property="og:description" content={description} />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://nyresedim.com.br" />
-  <meta property="og:locale" content="pt_BR" />
-  <meta property="og:image" content="https://nyresedim.com.br/images/foto-profissional-1.jpg" />
+    <!-- OG / Twitter -->
+    <meta property="og:title"       content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image"       content={ogImage} />
+    <meta property="og:type"        content="website" />
+    <meta property="og:locale"      content="pt_BR" />
+    <meta name="twitter:card"       content="summary_large_image" />
+    <meta name="twitter:title"      content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image"      content={ogImage} />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={title} />
-  <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content="https://nyresedim.com.br/images/foto-profissional-1.jpg" />
-
-  <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json" set:html={JSON.stringify([
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "additionalType": "https://schema.org/Therapist",
-      "name": "Nyres Edim",
-      "jobTitle": "Terapeuta Pathwork®",
-      "description": "Terapeuta Pathwork® com mais de 25 anos de experiência em autoconhecimento e espiritualidade. Atendimento individual e grupos de estudos em Belo Horizonte e online.",
-      "url": "https://nyresedim.com.br",
-      "telephone": "+55 31 98585-0589",
-      "image": "https://nyresedim.com.br/images/foto-profissional-1.jpg",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Rua dos Dominicanos 165, sala 301",
-        "addressLocality": "Belo Horizonte",
-        "addressRegion": "MG",
-        "addressCountry": "BR",
-        "neighborhood": "Serra"
-      },
-      "knowsAbout": ["Pathwork®", "Autoconhecimento", "Espiritualidade", "Terapia Individual", "Grupos de Estudos"]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Nyres Edim — Terapeuta Pathwork®",
-      "description": "Consultório de terapia Pathwork® em Belo Horizonte. Sessões individuais e grupos de estudos para autoconhecimento e transformação pessoal.",
-      "url": "https://nyresedim.com.br",
-      "telephone": "+55 31 98585-0589",
-      "image": "https://nyresedim.com.br/images/foto-profissional-1.jpg",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Rua dos Dominicanos 165, sala 301",
-        "addressLocality": "Belo Horizonte",
-        "addressRegion": "MG",
-        "addressCountry": "BR",
-        "neighborhood": "Serra"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -19.9332,
-        "longitude": -43.9266
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Physician",
+        "name": "Dra. Raquel Cosso",
+        "medicalSpecialty": "Endocrinology",
+        "description": "Endocrinologista com atendimento humanizado e personalizado.",
+        "url": "https://raquelcosso.com.br",
+        "sameAs": ["https://www.instagram.com/raquelcosso"]
       }
-    }
-  ])} />
+    </script>
 
-  <!-- Fonts: Cormorant Garamond (elegant serif) + Lato (clean sans) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;700&display=swap" as="style" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-  <!-- Preload hero image -->
-  <link rel="preload" href="/images/foto-profissional-1.jpg" as="image" />
+    <!-- Scroll Reveal JS -->
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', () => {
+        const els = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+        const obs = new IntersectionObserver((entries) => {
+          entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+        }, { threshold: 0.12 });
+        els.forEach(el => obs.observe(el));
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        // Counter animation
+        const counters = document.querySelectorAll('[data-counter]');
+        const counterObs = new IntersectionObserver((entries) => {
+          entries.forEach(e => {
+            if (!e.isIntersecting) return;
+            const el = e.target;
+            const target = parseInt(el.getAttribute('data-counter') || '0');
+            const prefix = el.getAttribute('data-prefix') || '';
+            const suffix = el.getAttribute('data-suffix') || '';
+            let current = 0;
+            const step = Math.ceil(target / 40);
+            const timer = setInterval(() => {
+              current = Math.min(current + step, target);
+              el.textContent = prefix + current + suffix;
+              if (current >= target) clearInterval(timer);
+            }, 30);
+            counterObs.unobserve(el);
+          });
+        }, { threshold: 0.5 });
+        counters.forEach(el => counterObs.observe(el));
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://nyresedim.com.br" />
-
-  <style>
-    @import "../styles/global.css";
-  </style>
-  <style is:global>
-    a { text-decoration: none; }
-  </style>
-</head>
-<body class="font-sans text-dark bg-cream">
-  <slot />
-
-  <script>
-    // Respect prefers-reduced-motion
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .stagger');
-
-    if (prefersReducedMotion) {
-      // Show all elements immediately without animation
-      revealElements.forEach(el => el.classList.add('visible'));
-    } else {
-      // Scroll reveal observer
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
+        // Navbar scroll
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+          header?.classList.toggle('scrolled', window.scrollY > 20);
         });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
-
-    // Header scroll effect
-    const header = document.querySelector('header');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header?.classList.add('header-scrolled');
-      } else {
-        header?.classList.remove('header-scrolled');
-      }
-    });
-
-    // Smooth scroll for anchor links (with offset for fixed header)
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', (e) => {
-        e.preventDefault();
-        const target = document.querySelector(anchor.getAttribute('href')!);
-        if (target) {
-          const offset = 80; // header height
-          const top = target.getBoundingClientRect().top + window.scrollY - offset;
-          window.scrollTo({ top, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
-        }
+        // Mobile menu
+        const btn = document.getElementById('menu-toggle');
+        const nav = document.getElementById('mobile-nav');
+        btn?.addEventListener('click', () => {
+          const open = nav?.classList.toggle('hidden') === false;
+          btn.setAttribute('aria-expanded', String(!open));
+        });
       });
-    });
-  </script>
-</body>
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>

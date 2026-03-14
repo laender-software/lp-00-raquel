@@ -2,31 +2,26 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
+import Especialidades from '../components/Especialidades.astro';
 import Dores from '../components/Dores.astro';
-import Pathwork from '../components/PathworkNew.astro';
-import ComoFunciona from '../components/ComoFuncionaNew.astro';
+import Sobre from '../components/Sobre.astro';
 import Depoimentos from '../components/Depoimentos.astro';
-import Sobre from '../components/SobreNew.astro';
-import Videos from '../components/VideosNew.astro';
-import FAQ from '../components/FAQNew.astro';
+import FAQ from '../components/FAQ.astro';
 import CTAFinal from '../components/CTAFinal.astro';
-import Footer from '../components/Footer.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
+import Footer from '../components/Footer.astro';
 ---
-
 <Layout>
   <Header />
   <main>
     <Hero />
+    <Especialidades />
     <Dores />
-    <Pathwork />
-    <ComoFunciona />
-    <Depoimentos />
     <Sobre />
-    <Videos />
+    <Depoimentos />
     <FAQ />
     <CTAFinal />
   </main>
-  <Footer />
   <WhatsAppButton />
+  <Footer />
 </Layout>

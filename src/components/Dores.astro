@@ -1,86 +1,40 @@
 ---
 const dores = [
-  {
-    titulo: "Falta de autovalorização",
-    items: [
-      "Sensação persistente de não ser suficiente, mesmo reconhecendo suas qualidades",
-      "Autoexigência excessiva e dificuldade de acolher a si mesmo",
-      "Tendência a se calar ou se retrair para evitar críticas ou rejeição"
-    ]
-  },
-  {
-    titulo: "Padrões repetitivos nos relacionamentos",
-    items: [
-      "Atração por relações que geram insegurança ou medo de abandono",
-      "Dificuldade em se abrir de forma autêntica, temendo se machucar",
-      "Sentimento de estar preso(a) aos mesmos conflitos e dinâmicas"
-    ]
-  },
-  {
-    titulo: "Desalinhamento com seu propósito",
-    items: [
-      "Sensação de viver no \"piloto automático\"",
-      "Dificuldade em enxergar novas possibilidades ou acreditar nelas",
-      "Falta de energia e motivação para agir em direção à vida que deseja"
-    ]
-  },
-  {
-    titulo: "Ansiedade e medo constantes",
-    items: [
-      "Preocupação excessiva com o futuro, como se algo ruim estivesse sempre prestes a acontecer",
-      "Angústia persistente de estar esquecendo algo importante ou de ter feito algo errado"
-    ]
-  },
-  {
-    titulo: "Culpa e autocrítica intensa",
-    items: [
-      "Culpa por não reagir como \"todo mundo consegue\"",
-      "Vergonha por sentir demais ou por precisar de ajuda",
-      "Dificuldade em se perdoar por erros ou escolhas do passado"
-    ]
-  },
-  {
-    titulo: "Cansaço profundo",
-    items: [
-      "Sensação de estar sempre exausto(a), até emocionalmente",
-      "Pequenas tarefas parecem pesadas e sem sentido",
-      "Corpo e mente lentos, como se algo estivesse bloqueando a energia vital"
-    ]
-  }
+  { icon: '😴', titulo: 'Cansaço inexplicável', desc: 'Fadiga constante mesmo dormindo bem pode indicar alteração hormonal.' },
+  { icon: '🏋️', titulo: 'Dificuldade para emagrecer', desc: 'Quando dieta e exercício não funcionam, o problema pode ser metabólico.' },
+  { icon: '🔄', titulo: 'Alterações menstruais', desc: 'Ciclos irregulares, ausência ou menstruação intensa merecem avaliação.' },
+  { icon: '💇', titulo: 'Queda de cabelo', desc: 'Perda excessiva de cabelo e unhas frágeis são sinais frequentes de disfunção hormonal.' },
+  { icon: '😰', titulo: 'Variações de humor e ansiedade', desc: 'Irritabilidade, tristeza ou ansiedade podem ter causa hormonal tratável.' },
+  { icon: '🌡️', titulo: 'Sensação de frio ou calor', desc: 'Intolerância ao frio ou calor excessivo pode indicar problema na tireoide.' },
 ];
 ---
-
-<section class="py-16 md:py-28 bg-warm" id="dores">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="text-center mb-16 reveal">
-      <p class="text-teal-deep font-bold text-lg uppercase tracking-[0.2em] mb-3">Você se identifica?</p>
-      <h2 class="font-serif text-3xl md:text-4xl font-semibold text-brown mb-4">
-        Sensação de estagnação, dificuldade de mudar padrões...
-      </h2>
-      <p class="text-brown-light text-lg max-w-2xl mx-auto">
-        Se esse é o seu caso, é provável que também perceba:
+<section class="py-16 md:py-28 bg-[#F8F6F2]">
+  <div class="mx-auto px-6 max-w-6xl">
+    <div class="text-center mb-14 reveal">
+      <p class="text-[#C9A84C] text-sm font-semibold uppercase tracking-widest mb-3">Você se identifica?</p>
+      <h2 class="font-serif text-3xl md:text-4xl font-semibold text-[#1a1a1a]">Sinais que merecem atenção</h2>
+      <p class="text-[#6B7280] mt-4 max-w-xl mx-auto">
+        Muitos sintomas do dia a dia têm origem hormonal. Se você se identifica com algum deles, marque uma consulta.
       </p>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 stagger">
-      {dores.map((dor) => (
-        <div class="card-lift bg-cream rounded-2xl p-8 shadow-sm border border-sand/30">
-          <h3 class="font-serif text-xl font-semibold text-teal-deep mb-4">{dor.titulo}</h3>
-          <ul class="space-y-2">
-            {dor.items.map(item => (
-              <li class="text-brown-light text-sm leading-relaxed flex gap-2">
-                <span class="text-teal mt-1 flex-shrink-0">•</span>
-                {item}
-              </li>
-            ))}
-          </ul>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 stagger">
+      {dores.map(({ icon, titulo, desc }) => (
+        <div class="reveal bg-white border border-[#E5E0D8] rounded-2xl p-6 flex gap-4 items-start card-lift">
+          <span class="text-2xl mt-0.5" aria-hidden="true">{icon}</span>
+          <div>
+            <h3 class="font-serif text-base font-semibold text-[#1B4F72] mb-1">{titulo}</h3>
+            <p class="text-[#6B7280] text-sm leading-relaxed">{desc}</p>
+          </div>
         </div>
       ))}
     </div>
 
     <div class="text-center mt-12 reveal">
-      <a href="#contato" class="btn-glow bg-teal-deep text-white px-8 py-4 rounded-full font-semibold hover:bg-teal transition-all shadow-lg inline-block focus:outline-none focus:ring-2 focus:ring-teal-deep focus:ring-offset-2">
-        Agende uma Consulta
+      <a href="#contato"
+         class="bg-[#1B4F72] text-white px-8 py-3.5 rounded-full font-semibold text-sm inline-block hover:bg-[#154060] transition-colors focus:ring-2 focus:ring-[#1B4F72] focus:ring-offset-2"
+         aria-label="Agendar consulta">
+        Quero me consultar
       </a>
     </div>
   </div>

@@ -1,0 +1,33 @@
+---
+const especialidades = [
+  { icon: '🦋', nome: 'Tireoide', desc: 'Nódulos, hipo e hipertireoidismo, Hashimoto e Graves.' },
+  { icon: '🩸', nome: 'Diabetes', desc: 'Tipo 1, tipo 2, pré-diabetes e diabetes gestacional.' },
+  { icon: '⚖️', nome: 'Obesidade e Emagrecimento', desc: 'Tratamento médico baseado em evidências para peso saudável.' },
+  { icon: '🌸', nome: 'SOP', desc: 'Síndrome do Ovário Policístico: hormônios, ciclo e fertilidade.' },
+  { icon: '🌙', nome: 'Menopausa e Andropausa', desc: 'Reposição hormonal e manejo dos sintomas com segurança.' },
+  { icon: '🦴', nome: 'Osteoporose', desc: 'Diagnóstico, prevenção e tratamento da perda óssea.' },
+  { icon: '🔬', nome: 'Doenças da Suprarrenal', desc: 'Síndrome de Cushing, insuficiência adrenal e mais.' },
+  { icon: '📈', nome: 'Crescimento e Desenvolvimento', desc: 'Acompanhamento hormonal em crianças e adolescentes.' },
+];
+---
+<section id="especialidades" class="py-16 md:py-28 bg-[#FFFFFF]">
+  <div class="mx-auto px-6 max-w-6xl">
+    <div class="text-center mb-14 reveal">
+      <p class="text-[#C9A84C] text-sm font-semibold uppercase tracking-widest mb-3">Áreas de Atuação</p>
+      <h2 class="font-serif text-3xl md:text-4xl font-semibold text-[#1a1a1a]">Especialidades</h2>
+      <p class="text-[#6B7280] mt-4 max-w-xl mx-auto">
+        Atendimento completo em endocrinologia e metabologia, com foco no seu bem-estar.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-5 stagger">
+      {especialidades.map(({ icon, nome, desc }) => (
+        <div class="reveal bg-[#FDFCFA] border border-[#E5E0D8] rounded-2xl p-6 flex flex-col gap-3 card-lift">
+          <span class="text-3xl" aria-hidden="true">{icon}</span>
+          <h3 class="font-serif text-lg font-semibold text-[#1B4F72]">{nome}</h3>
+          <p class="text-[#6B7280] text-sm leading-relaxed">{desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
