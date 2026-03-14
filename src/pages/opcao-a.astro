@@ -1,0 +1,48 @@
+---
+// OPÇÃO A — Petróleo escuro no lugar do preto. Tudo dentro do mesmo universo azul.
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Especialidades from '../components/Especialidades.astro';
+import Dores from '../components/Dores.astro';
+import Sobre from '../components/Sobre.astro';
+import Depoimentos from '../components/Depoimentos.astro';
+import FAQ from '../components/FAQ.astro';
+import CTAFinal from '../components/CTAFinal.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import Footer from '../components/Footer.astro';
+
+const theme = `
+  /* OPÇÃO A — Preto → Petróleo escuro */
+  :root, body, * {
+    --color-text: #0D2B3E !important;
+  }
+  body { color: #0D2B3E; }
+  .text-\\[\\#1a1a1a\\] { color: #0D2B3E !important; }
+  footer { background-color: #0D2B3E !important; }
+  footer .bg-\\[\\#1a1a1a\\] { background-color: #0D2B3E !important; }
+`;
+---
+<Layout title="Opção A — Dra. Raquel" themeOverride={theme}>
+  <!-- Banner identificador -->
+  <div style="position:fixed;top:0;left:0;right:0;z-index:9999;background:#0D2B3E;color:white;text-align:center;padding:6px;font-size:12px;font-family:sans-serif;">
+    🎨 OPÇÃO A — Petróleo Escuro (sem preto) &nbsp;|&nbsp; 
+    <a href="/" style="color:#C9A84C">Original</a> &nbsp;|&nbsp;
+    <a href="/opcao-b" style="color:#C9A84C">Opção B</a> &nbsp;|&nbsp;
+    <a href="/opcao-c" style="color:#C9A84C">Opção C</a>
+  </div>
+  <div style="margin-top:28px;">
+    <Header />
+    <main>
+      <Hero />
+      <Especialidades />
+      <Dores />
+      <Sobre />
+      <Depoimentos />
+      <FAQ />
+      <CTAFinal />
+    </main>
+    <WhatsAppButton />
+    <Footer />
+  </div>
+</Layout>

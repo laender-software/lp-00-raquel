@@ -1,0 +1,44 @@
+---
+// OPÇÃO C — Petróleo como cor dominante. Dourado só como detalhe fino. Footer petróleo médio.
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Especialidades from '../components/Especialidades.astro';
+import Dores from '../components/Dores.astro';
+import Sobre from '../components/Sobre.astro';
+import Depoimentos from '../components/Depoimentos.astro';
+import FAQ from '../components/FAQ.astro';
+import CTAFinal from '../components/CTAFinal.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import Footer from '../components/Footer.astro';
+
+const theme = `
+  /* OPÇÃO C — Petróleo dominante, sem preto, bege quente nas seções alternadas */
+  body { color: #1B4F72; background-color: #FDFCFA; }
+  h1, h2, h3, h4 { color: #154060; }
+  footer { background-color: #154060 !important; }
+  section { }
+`;
+---
+<Layout title="Opção C — Dra. Raquel" themeOverride={theme}>
+  <div style="position:fixed;top:0;left:0;right:0;z-index:9999;background:#154060;color:white;text-align:center;padding:6px;font-size:12px;font-family:sans-serif;">
+    🎨 OPÇÃO C — Petróleo dominante (sem preto, tudo azul) &nbsp;|&nbsp;
+    <a href="/" style="color:#C9A84C">Original</a> &nbsp;|&nbsp;
+    <a href="/opcao-a" style="color:#C9A84C">Opção A</a> &nbsp;|&nbsp;
+    <a href="/opcao-b" style="color:#C9A84C">Opção B</a>
+  </div>
+  <div style="margin-top:28px;">
+    <Header />
+    <main>
+      <Hero />
+      <Especialidades />
+      <Dores />
+      <Sobre />
+      <Depoimentos />
+      <FAQ />
+      <CTAFinal />
+    </main>
+    <WhatsAppButton />
+    <Footer />
+  </div>
+</Layout>
