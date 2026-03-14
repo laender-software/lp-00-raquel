@@ -85,6 +85,22 @@ body {
 }
 .float { animation: float 3s ease-in-out infinite; }
 
+/* ── Temas ── */
+[data-theme="opcao-a"] body,
+[data-theme="opcao-a"] p,
+[data-theme="opcao-a"] li,
+[data-theme="opcao-a"] span:not(.text-\[\#1B4F72\]):not(.text-\[\#C9A84C\]):not(.text-\[\#6B7280\]):not([class*="text-blue"]):not([class*="text-white"]) {
+  color: #0D2B3E;
+}
+[data-theme="opcao-a"] .text-\[\#1a1a1a\] { color: #0D2B3E !important; }
+[data-theme="opcao-a"] footer { background-color: #0D2B3E !important; }
+
+[data-theme="opcao-b"] .text-\[\#1a1a1a\] { color: #2D3748 !important; }
+[data-theme="opcao-b"] footer { background-color: #2D3748 !important; }
+
+[data-theme="opcao-c"] .text-\[\#1a1a1a\] { color: #1B4F72 !important; }
+[data-theme="opcao-c"] footer { background-color: #154060 !important; }
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .reveal, .reveal-left, .reveal-right, .reveal-scale {

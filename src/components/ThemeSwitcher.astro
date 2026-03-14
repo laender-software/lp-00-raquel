@@ -51,85 +51,40 @@
 </div>
 
 <script is:inline>
-  const themes = {
-    'original': {
-      label: 'Original',
-      text: '#1a1a1a',
-      footerBg: '#1a1a1a',
-      h1: '#1a1a1a',
-    },
-    'opcao-a': {
-      label: 'Opção A',
-      text: '#0D2B3E',
-      footerBg: '#0D2B3E',
-      h1: '#0D2B3E',
-    },
-    'opcao-b': {
-      label: 'Opção B',
-      text: '#2D3748',
-      footerBg: '#2D3748',
-      h1: '#1A202C',
-    },
-    'opcao-c': {
-      label: 'Opção C',
-      text: '#1B4F72',
-      footerBg: '#154060',
-      h1: '#154060',
-    },
+  const labels = {
+    'original': 'Original',
+    'opcao-a': 'Opção A',
+    'opcao-b': 'Opção B',
+    'opcao-c': 'Opção C',
   };
 
+  let currentTheme = localStorage.getItem('raquel-theme') || 'original';
+
   function applyTheme(key) {
-    const t = themes[key];
-    document.documentElement.style.setProperty('--rt-text', t.text);
-    document.documentElement.style.setProperty('--rt-footer', t.footerBg);
-
-    // Texto geral
-    document.body.style.color = t.text;
-
-    // Headings
-    document.querySelectorAll('h1,h2,h3,h4').forEach(el => {
-      // só sobrescreve se não tiver cor petrol já definida inline
-      if (!el.style.color || el.style.color === themes[currentTheme]?.h1) {
-        el.style.color = t.h1;
-      }
-    });
-
-    // Footer bg
-    const footer = document.querySelector('footer');
-    if (footer) footer.style.backgroundColor = t.footerBg;
-
-    // Atualizar label e borda ativa
-    document.getElementById('theme-label').textContent = t.label;
+    document.documentElement.setAttribute('data-theme', key === 'original' ? '' : key);
+    document.getElementById('theme-label').textContent = labels[key];
     document.querySelectorAll('.theme-opt').forEach(btn => {
-      btn.style.border = btn.dataset.theme === key
-        ? '2px solid #1B4F72'
-        : '2px solid transparent';
+      btn.style.border = btn.dataset.theme === key ? '2px solid #1B4F72' : '2px solid transparent';
       btn.style.background = btn.dataset.theme === key ? '#EBF3FA' : '#f8f8f8';
     });
-
     currentTheme = key;
     localStorage.setItem('raquel-theme', key);
   }
 
-  let currentTheme = localStorage.getItem('raquel-theme') || 'original';
-
   document.addEventListener('DOMContentLoaded', () => {
     applyTheme(currentTheme);
 
-    // Toggle painel
     document.getElementById('theme-toggle').addEventListener('click', () => {
       const panel = document.getElementById('theme-panel');
       panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
     });
 
-    // Fechar ao clicar fora
     document.addEventListener('click', (e) => {
       if (!document.getElementById('theme-switcher').contains(e.target)) {
         document.getElementById('theme-panel').style.display = 'none';
       }
     });
 
-    // Botões de opção
     document.querySelectorAll('.theme-opt').forEach(btn => {
       btn.addEventListener('click', () => {
         applyTheme(btn.dataset.theme);
