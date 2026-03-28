@@ -49,6 +49,12 @@ const {
       }
     </script>
 
+    <!-- Fonts self-hosted -->
+    <link rel="preload" href="/fonts/Cormorant-Garamond-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Cormorant-Garamond-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Lato-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+
     {themeOverride && <style set:html={themeOverride} />}
     <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
