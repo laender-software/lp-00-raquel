@@ -1,21 +1,23 @@
-# CLAUDE.md — Site Raquel (Endocrinologista)
+# CLAUDE.md — Site Dra. Raquel Cosso (Endocrinologista)
 
-Landing page profissional para **Dra. Raquel** — Endocrinologista. Conversion-focused: cada seção direciona para agendamento (WhatsApp ou sistema de agendamento). Static only, NO SSR.
+Landing page profissional para **Dra. Raquel Cosso** — Endocrinologista e Metabologista. Conversion-focused: cada seção direciona para agendamento (WhatsApp ou sistema de agendamento). Static only, NO SSR.
 
 **Goals:** Lighthouse 95+, mobile-first, accessibility AA, tom profissional, acolhedor e confiável.
 
 ## O Projeto
 
-Site institucional para endocrinologista. Público-alvo: pacientes que buscam consulta com especialista em hormônios, tireoide, diabetes, obesidade, menopausa, etc.
+Site institucional para endocrinologista. Público-alvo: pacientes que buscam consulta com especialista em hormônios, tireoide, diabetes, obesidade, menopausa, etc. Atendimento particular only (reembolso possível).
 
-**Dados reais (preencher conforme briefing):**
-- Nome: Dra. Raquel [sobrenome a confirmar]
-- CRM: a confirmar
-- Especialidades: Endocrinologia + [subespecialidades a confirmar]
-- Localização: a confirmar
-- WhatsApp: a confirmar
+**Dados reais:**
+- Nome: Dra. Raquel Cosso
+- CRM: CRM-MG 82239 | RQE 68237
+- Especialidades: Endocrinologia e Metabologia — obesidade, diabetes, tireoide, SOP, climatério/menopausa, osteoporose, colesterol/risco cardiovascular, doenças hipófise/adrenais
+- Formação: Medicina (FCMMG), Clínica Médica + Endocrinologia (Santa Casa BH), Hospital Madre Teresa (equipe + preceptora)
+- Localização: Av. do Contorno, 8000 — Sala 1012, Santo Agostinho, BH/MG
+- WhatsApp: (31) 99997-2136
 - Instagram: a confirmar
 - Site de agendamento: a confirmar
+- **Ficha completa:** `docs/ficha.md`
 
 ---
 
@@ -23,7 +25,7 @@ Site institucional para endocrinologista. Público-alvo: pacientes que buscam co
 
 - **Framework:** Astro 5 (static)
 - **Estilos:** Tailwind CSS v4 via `@tailwindcss/vite` (NOT `@astrojs/tailwind`)
-- **Fontes:** Google Fonts — serif elegante para headings (ex: Cormorant Garamond), sans clean para corpo (ex: Lato ou Inter)
+- **Fontes:** Self-hosted woff2 (NUNCA Google Fonts CDN) — serif elegante para headings, sans clean para corpo
 - **Deploy:** Vercel (recomendado)
 - **Dev server:** `npm run dev` → localhost:4321
 
@@ -46,48 +48,66 @@ public/
 
 ## Identidade Visual
 
-**Paleta (a definir com Pedro/Raquel — sugestão inicial):**
-- Fundo: branco / off-white suave (`#FAFAF8`)
-- Primária: azul-cinza médico / verde-teal suave (transmite saúde, confiança)
-- Accent: dourado suave ou verde-salva (elegância + saúde)
+**Paleta (referência enviada pela Raquel — aguardando definitiva):**
+- Fundo: nude quente (`#EAD4C9` — ref) — ajustar pra não ficar pesado, talvez diluir pra off-white rosado
+- Primária: marsala/terracota (`#A2584B` — ref) — botões, nav, headings
+- Accent: dourado/caramelo (`#B68766` — ref) — detalhes pequenos, padrões geométricos, dividers (NUNCA em botões ou elementos grandes)
 - Texto principal: `#1a1a1a`
 - Texto secundário: `#6B7280`
 
 **Tipografia:**
-- Headings: fonte serif elegante (Cormorant Garamond ou Playfair Display)
-- Body: fonte sans limpa (Lato, Inter ou DM Sans)
+- Headings: fonte serif elegante (Cormorant Garamond ou similar — a definir)
+- Body: fonte sans limpa (Lato ou DM Sans — a definir)
+- Regras: tight tracking (-0.03em) em headings grandes, line-height 1.7 no body
 
-**Estética:** Clínica premium, acolhedora, feminina/neutra. Transmite competência sem ser fria. Inspiração: consultórios premium, marcas de saúde de alto padrão.
+**Estética:** Editorial sofisticada, quente, feminina premium. Personal branding / lifestyle (sem jaleco). Transmite competência + acolhimento. Padrões geométricos dourados como diferencial sutil (dividers, backgrounds de seção).
+
+**Referências visuais (sites que a Raquel gosta):**
+- dramariliaalmeida.med.br — principal ref estética (marsala + nude, personal brand)
+- draanaeduardatanios.com.br — ref de foto/lifestyle (verde musgo + terracota, foto dominante)
+- flavioendocrinologista.com.br — marido (azul-petróleo + dourado, mais institucional)
+- Screenshots full-page em: `C:\Users\Pedro PC\OneDrive\Desktop\GoFullPage\`
+
+**Estilo de foto:** Personal Branding / Lifestyle — sem jaleco. Fotos atuais: look marrom + bege em ambiente de consultório.
 
 ---
 
 ## Tom de Linguagem
 
+**Tom da Raquel (extraído do docx):** pessoal, caloroso, narrativo. Ela conta sua história em primeira pessoa ("Brinco que a endocrinologia me escolheu..."). Fala de paixão, família, cuidado. O site precisa soar como ela, não como uma clínica genérica.
+
 **Como falar:**
-- Empático e profissional: "Cuidamos do seu equilíbrio hormonal com atenção personalizada"
-- Educativo: explicar brevemente o que é endocrinologia sem ser técnico demais
-- Acolhedor: paciente precisa se sentir seguro antes de agendar
-- CTAs claros: "Agendar Consulta", "Fale Comigo", "Marque sua Consulta"
+- 1a pessoa: "Acredito em um atendimento individualizado, acolhedor e pautado em evidências científicas"
+- Narrativo: história pessoal como diferencial (filha de endocrinologista)
+- Educativo: explicar o que o endocrinologista faz sem jargão
+- Acolhedor: "vamos construir juntos um plano terapêutico"
+- CTAs claros: "Agendar Consulta", "Fale Comigo"
 
 **Evitar:**
-- ❌ Linguagem excessivamente técnica / CID-10 / jargões médicos sem explicação
-- ❌ Tom frio e institucional ("Nosso corpo clínico...")
-- ❌ Promessas de resultado ("Emagreça X kg...")
+- Linguagem excessivamente técnica / CID-10 / jargões sem explicação
+- Tom frio e institucional ("Nosso corpo clínico...")
+- Promessas de resultado ("Emagreça X kg...")
+- 3a pessoa ("A Dra. Raquel oferece...") — ela fala em 1a pessoa
 
 ---
 
 ## Seções Planejadas (index.astro)
 
-1. **Header/Navbar** — logo + CTA "Agendar Consulta"
-2. **Hero** — foto da Dra. Raquel, headline principal, CTA
-3. **Especialidades** — cards com as áreas de atuação (tireoide, diabetes, obesidade, hormônios, menopausa, etc.)
-4. **Dores do Público** — problemas que os pacientes chegam com (fadiga, ganho de peso, alterações hormonais, etc.)
-5. **Sobre a Dra. Raquel** — formação, CRM, experiência, diferenciais
-6. **Como Funciona** — processo de agendamento / consulta (etapas simples)
-7. **Depoimentos** — relatos de pacientes (a coletar)
-8. **FAQ** — dúvidas frequentes sobre endocrinologia / consulta
-9. **CTA Final** — WhatsApp + agendamento + localização
-10. **Footer**
+Baseado no docx da Raquel + padrões das referências (Marília, Ana Eduarda):
+
+1. **Header/Navbar** — nav minimalista: nome/logo + links + CTA marsala pill (ref: Marília)
+2. **Hero** — foto editorial grande da Raquel + H1 display + subtitle + CTA agendar (ref: Ana Eduarda — foto dominante)
+3. **Sobre a Dra. Raquel** — história pessoal (filha de endocrinologista) + foto editorial (look diferente do hero) + credenciais em grid (ref: Marília)
+4. **Especialidades** — 10 áreas em cards (3 colunas desktop, stack mobile) com ícone/ilustração + título + descrição curta
+5. **Como é o Atendimento** — seção narrativa humanizada (ref: Ana Eduarda "Como funciona minha consulta?")
+6. **O que faz o Endocrinologista** — seção educativa (copy pronta no docx)
+7. **Formação** — bullets de credenciais + logos institucionais (FCMMG, Santa Casa, Madre Teresa)
+8. **Depoimentos** — relatos de pacientes (a coletar)
+9. **FAQ** — 5 perguntas (copy pronta no docx), accordion
+10. **CTA Final** — WhatsApp + agendamento + localização
+11. **Footer**
+
+**Copy:** 100% pronta no docx (`assets-raquel/home_page_consultorio_raquel_cosso.docx`). Transcrita na `docs/ficha.md` seção "Copy Aprovada".
 
 ---
 

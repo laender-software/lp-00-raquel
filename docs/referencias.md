@@ -1,81 +1,115 @@
-# Referências — site-raquel
+# Referencias — Dra. Raquel Cosso
 
-## Sites de Endocrinologistas Brasileiros
+## Referencias da Cliente
 
-### 1. Dra. Stéphanie Cozzolino — drastephaniecozzolino.com.br ⭐
-**Por que é boa referência:**
+Sites que a Raquel gosta. Direcionam a estetica e o tom do site.
+
+### 1. Dra. Marilia Almeida — dramariliaalmeida.med.br (principal ref estetica)
+
+**Screenshot:** [dramariliaalmeida.png](referencias/dramariliaalmeida.png)
+
+**Paleta:** marsala/vinho `#833C4E` + nude quente `#F7F5F3` + texto quase preto
+**Tipografia:** sans bold extraheavy no hero, italico em "& Longevidade" — contraste de peso
+**Layout:**
+- Nav minimalista: logo + 3 links + CTA marsala pill
+- Hero split: texto bold a esquerda + smartphone mockup com video a direita
+- Foto editorial sem jaleco, look profissional-casual
+- Badge "+10 anos de excelencia" flutuante sobre foto
+- Especialidades em 3 colunas (icone + titulo + lista)
+- Secao escura (preto) pro conteudo educativo — contraste forte
+- Integracao com redes sociais (Instagram, YouTube, Podcast)
+
+**Vibe:** Personal brand medica sofisticada. Autoridade + humanizacao. Publico feminino 30-50 que busca saude como qualidade de vida.
+
+**O que extrair:** paleta marsala/nude, nav pill, badges de credencial, layout editorial, tom de personal brand.
+
+---
+
+### 2. Dra. Ana Eduarda Tanios — draanaeduardatanios.com.br (ref de foto/lifestyle)
+
+**Screenshot:** [draanaeduardatanios.png](referencias/draanaeduardatanios.png)
+
+**Paleta:** verde musgo `#344B2E` + verde sage `#6C7958` + fundo off-white
+**Tipografia:** Poppins (sans geometrica arredondada) + variacao de peso pra hierarquia
+**Layout:**
+- Ticker/banner topo rotatorio com modalidades de atendimento
+- Hero impactante: fundo verde escuro + foto editorial heroica da medica
+- Roupas em tom creme/terracota — coordenadas com a identidade visual
+- Multiplas fotos com looks diferentes ao longo da pagina
+- "Como funciona minha consulta?" — secao narrativa humanizada
+- Especialidades em carousel horizontal com fotos
+- Formacao: grid de bullets + foto editorial (segundo look)
+- CTA de localizacao com fundo verde + fotos do consultorio
+
+**Vibe:** Lifestyle completo, quente, jovem. Cuidado humanizado como proposta central.
+
+**O que extrair:** estilo de foto dominante no hero, multiplos looks, secao narrativa do atendimento, coordenacao roupa/paleta.
+
+---
+
+### 3. Dr. Flavio Cosso — flavioendocrinologista.com.br (marido da Raquel)
+
+**Screenshot:** [flavioendocrinologista.png](referencias/flavioendocrinologista.png)
+
+**Paleta:** azul-petroleo `#004056` + dourado ambar `#CA9D2C` + fundo off-white
+**Tipografia:** Lilita One (display slab arredondada) + DM Sans (body)
+**Layout:**
+- Hero: texto a esquerda + foto com jaleco a direita + CTA flutuante dourado
+- Sobre: texto + foto com fundo colorido
+- Formacao: foto + bullets de credenciais
+- Especialidades: cards com foto + titulo + CTA
+- Blog integrado
+- Logo dourado grande na secao de agendamento
+
+**Vibe:** Institucional, medico classico, funcional. Credenciais fortes (UFMG).
+
+**O que extrair:** estrutura de secoes, peso das credenciais. O estilo foto com jaleco = anti-referencia pra Raquel (ela quer lifestyle).
+
+**Nota:** Mesma familia (Cosso). A Raquel pode querer alguma coerencia visual com o site do marido, mas com identidade propria.
+
+---
+
+## Sintese — Direcao Estetica pra Raquel
+
+| Aspecto | Direcao | Ref principal |
+|---|---|---|
+| Paleta | Marsala/terracota + dourado accent + nude quente | Marilia (cor) + paleta ref da Raquel |
+| Tipografia | Serif display (headings) + sans clean (body) | A definir |
+| Foto | Personal Branding / Lifestyle, sem jaleco | Ana Eduarda |
+| Hero | Foto editorial grande + texto bold + CTA | Ana Eduarda (composicao) + Marilia (cor) |
+| Nav | Minimalista, CTA pill marsala | Marilia |
+| Atendimento | Secao narrativa humanizada, 1a pessoa | Ana Eduarda |
+| Diferencial unico | Padroes geometricos dourados (nenhuma ref usa — oportunidade) | Paleta ref da Raquel |
+
+---
+
+## Referencias Internas (padroes de mercado)
+
+Pesquisa previa de sites de endocrinologistas BR pra entender estrutura de conversao. Essas refs sao ferramenta interna, nao direcionam estetica.
+
+### Dra. Stephanie Cozzolino — drastephaniecozzolino.com.br
 - Endocrinologista mulher (mesmo perfil da Raquel)
-- Estrutura clara: hero + áreas de atuação + sobre + CTA
-- Áreas bem explicadas de forma acessível (não técnica demais)
-- CTA direto: "Agendar minha consulta" → WhatsApp
+- Estrutura clara: hero + areas de atuacao + sobre + CTA
+- Areas explicadas de forma acessivel
+- CTA direto: "Agendar minha consulta" -> WhatsApp
+- Tom empatico, educativo, acessivel
 
-**Seções dela:**
-- Hero com foto + nome + especialidade
-- Áreas de atuação (cards com nome + explicação simples):
-  - SOP, Obesidade, Nódulos na Tireoide, Hipotireoidismo, Menopausa, Andropausa
-- CTA intermediário ("50% da população está acima do peso — Agende!")
-- Formação acadêmica
-- Outros atendimentos
+### Dr. Eduardo Henrique — dreduardoendocrino.com.br
+- Site completo com LP + paginas internas
+- "Busque pelo seu sintoma" (interessante pra SEO)
+- Destaque em formacao/credenciais (USP, residencias)
+- Licao: credenciais importam muito
 
-**Tom:** Empático, educativo, acessível. Explica a doença brevemente pra gerar identificação.
+### Padroes de Conversao Identificados
 
----
+Estrutura que converte em sites de endocrinologistas BR:
+1. Hero: foto + nome + CRM + especialidade + CTA
+2. Especialidades: cards com nome + explicacao de 2-3 linhas
+3. "Por que me consultar?": dores do paciente
+4. Sobre: formacao, residencia, associacoes
+5. CTA intermediario: urgencia leve ("Voce sabia que X%...")
+6. Depoimentos: prova social
+7. Como agendar: simples, WhatsApp ou link direto
+8. Footer: CRM, endereco
 
-### 2. Dr. Eduardo Henrique — dreduardoendocrino.com.br
-**Por que é boa referência:**
-- Site completo com landing page + páginas internas
-- Seção "Busque pelo seu sintoma" (interessante pra SEO)
-- Destaque em formação/credenciais (USP, residências)
-- Foco em tireoide e emagrecimento
-
-**Lição:** Credenciais importam muito — paciente quer saber com quem está se consultando.
-
----
-
-## Padrões Identificados (sites de endocrinologistas BR)
-
-### Estrutura comum que converte:
-1. **Hero** — foto médica + nome + CRM + especialidade + CTA
-2. **Especialidades/Áreas** — cards com nome + explicação de 2-3 linhas (acessível)
-3. **Por que me consultar?** — dores do paciente (fadiga, ganho de peso, hormônios, etc.)
-4. **Sobre a médica** — formação, residência, associações (SBEM), experiência
-5. **CTA intermediário** — urgência leve ("Você sabia que X% da população...")
-6. **Depoimentos** — prova social
-7. **Como agendar** — simples, WhatsApp ou link direto
-8. **Footer** — CRM, endereço
-
-### Tom que funciona:
-- Explica a condição brevemente → paciente se identifica → agenda
-- Foco em qualidade de vida, não em CIDs
-- "Aqui o foco é em você" — humanização
-- Credenciais sem arrogância
-
-### Especialidades mais comuns em sites de endocrino BR:
-- Tireoide (nódulos, hipo/hipertireoidismo, Hashimoto)
-- Diabetes (tipo 1, tipo 2, gestacional)
-- Obesidade e emagrecimento
-- SOP (Síndrome do Ovário Policístico)
-- Menopausa e andropausa
-- Osteoporose
-- Suprarrenais (Cushing, Addison)
-- Crescimento e desenvolvimento
-
----
-
-## Referências de Design (internacional)
-
-- **Dribbble** — https://dribbble.com/tags/endocrinology (14 designs)
-- Estética predominante: branco + azul claro/teal + verde suave | serif elegante | fotos profissionais com jaleco
-
----
-
-## Conclusão para o site-raquel
-
-**Modelo mais próximo:** drastephaniecozzolino.com.br (mesma persona — endocrinologista mulher, BR)
-
-**Diferencial que podemos fazer melhor:**
-- Design mais moderno (Astro vs WordPress pesado)
-- Animações suaves (scroll reveal, hover)
-- Mobile perfeito
-- Performance (Lighthouse 95+)
-- Conteúdo mais focado em conversão (CTA a cada 2 seções)
+Tom que funciona: explica a condicao -> paciente se identifica -> agenda. Foco em qualidade de vida, nao CIDs. Credenciais sem arrogancia.
