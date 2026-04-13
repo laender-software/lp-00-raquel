@@ -1,0 +1,55 @@
+---
+import atenImg from '../assets/images/raquel-portrait-office-chair.jpeg';
+---
+
+<section class="py-24 lg:py-32 bg-bg-warm" id="atendimento">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <!-- Text -->
+      <div class="reveal">
+        <p class="text-xs font-semibold uppercase tracking-[0.15em] text-accent mb-4">
+          Como é o meu atendimento
+        </p>
+
+        <h2 class="font-serif text-[clamp(1.75rem,3.5vw,2.5rem)] font-semibold leading-[1.15] tracking-[-0.02em] text-text mb-8">
+          Meu foco é olhar para você como um todo
+        </h2>
+
+        <div class="space-y-5 text-base leading-[1.8] text-muted">
+          <p>
+            A primeira consulta tem como objetivo oferecer um atendimento personalizado e humanizado.
+            Vamos conversar sobre sua história clínica, seus sintomas e abordaremos outros fatores que
+            influenciam diretamente na sua saúde metabólica e hormonal.
+          </p>
+          <p>
+            Vamos analisar seus hábitos de vida, sua rotina, sua alimentação, qualidade do sono e como
+            tudo isso pode interferir na sua qualidade de vida. Vou avaliar seus exames anteriores quando
+            houver e propor novos exames caso seja necessário.
+          </p>
+          <p class="text-text font-medium border-l-2 border-accent pl-5 italic">
+            Ao final do atendimento, vamos construir juntos um plano terapêutico que esteja alinhado
+            com a sua realidade e suas necessidades.
+          </p>
+        </div>
+      </div>
+
+      <!-- Photo -->
+      <div class="reveal-right">
+        <div class="relative photo-zoom rounded-2xl">
+          <img
+            src={atenImg.src}
+            alt="Dra. Raquel Cosso em atendimento no consultório"
+            width="560"
+            height="680"
+            class="photo-editorial rounded-2xl object-cover object-top w-full aspect-[4/5]
+                   shadow-[0_8px_32px_rgba(30,25,21,0.1),0_2px_8px_rgba(30,25,21,0.06)]"
+            loading="lazy"
+            decoding="async"
+          />
+          <!-- Gold accent line -->
+          <div class="absolute -top-3 -left-3 w-24 h-24 border-l-2 border-t-2 border-accent/30 rounded-tl-2xl" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

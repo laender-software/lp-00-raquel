@@ -1,24 +1,53 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;700&display=swap');
 
-@theme {
-  --color-petrol: #1B4F72;
-  --color-petrol-dark: #154060;
-  --color-petrol-light: #2E6DA4;
-  --color-gold: #C9A84C;
-  --color-gold-light: #E2C278;
-  --color-bg: #FFFFFF;
-  --color-bg-alt: #F8F6F2;
-  --color-bg-card: #FDFCFA;
-  --color-text: #1a1a1a;
-  --color-muted: #6B7280;
-  --color-border: #E5E0D8;
+/* ── Fonts (self-hosted woff2, variable) ── */
 
-  --font-serif: "Cormorant Garamond", Georgia, serif;
-  --font-sans: "Lato", system-ui, sans-serif;
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../fonts/playfair-display.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
 }
 
-/* Google Fonts moved to top */
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../fonts/playfair-display-italic.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("../fonts/outfit.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Design Tokens ── */
+
+@theme {
+  /* Palette */
+  --color-primary: #A2584B;
+  --color-primary-dark: #8A4639;
+  --color-primary-light: #BF7265;
+  --color-accent: #B68766;
+  --color-accent-light: #D4A574;
+  --color-bg: #FDFAF7;
+  --color-bg-warm: #F3EBE4;
+  --color-bg-dark: #3D1E1A;
+  --color-text: #1E1915;
+  --color-muted: #7C7067;
+  --color-border: #E5DDD5;
+
+  /* Typography */
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Outfit", system-ui, sans-serif;
+}
+
+/* ── Base ── */
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -29,20 +58,24 @@ body {
   color: var(--color-text);
   background-color: var(--color-bg);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ── Scroll Reveal ── */
+
 .reveal,
 .reveal-left,
 .reveal-right,
 .reveal-scale {
   opacity: 0;
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.reveal        { transform: translateY(28px); }
-.reveal-left   { transform: translateX(-32px); }
-.reveal-right  { transform: translateX(32px); }
-.reveal-scale  { transform: scale(0.94); }
+.reveal       { transform: translateY(28px); }
+.reveal-left  { transform: translateX(-32px); }
+.reveal-right { transform: translateX(32px); }
+.reveal-scale { transform: scale(0.94); }
 
 .reveal.visible,
 .reveal-left.visible,
@@ -52,62 +85,76 @@ body {
   transform: none;
 }
 
-/* Stagger */
-.stagger > *:nth-child(1)  { transition-delay: 0ms; }
-.stagger > *:nth-child(2)  { transition-delay: 80ms; }
-.stagger > *:nth-child(3)  { transition-delay: 160ms; }
-.stagger > *:nth-child(4)  { transition-delay: 240ms; }
-.stagger > *:nth-child(5)  { transition-delay: 320ms; }
-.stagger > *:nth-child(6)  { transition-delay: 400ms; }
-.stagger > *:nth-child(7)  { transition-delay: 480ms; }
-.stagger > *:nth-child(8)  { transition-delay: 560ms; }
+/* Stagger children */
+.stagger > *:nth-child(1) { transition-delay: 0ms; }
+.stagger > *:nth-child(2) { transition-delay: 80ms; }
+.stagger > *:nth-child(3) { transition-delay: 100ms; }
+.stagger > *:nth-child(4) { transition-delay: 180ms; }
+.stagger > *:nth-child(5) { transition-delay: 240ms; }
+.stagger > *:nth-child(6) { transition-delay: 300ms; }
+.stagger > *:nth-child(7) { transition-delay: 360ms; }
+.stagger > *:nth-child(8) { transition-delay: 420ms; }
+.stagger > *:nth-child(9) { transition-delay: 480ms; }
+.stagger > *:nth-child(10) { transition-delay: 540ms; }
 
-/* Card lift */
+/* Photo editorial filter */
+.photo-editorial {
+  filter: contrast(1.08) saturate(1.12) brightness(1.02) sepia(0.06);
+}
+
+/* Photo warm — more contrast + warmth for hero/featured photos */
+.photo-warm {
+  filter: contrast(1.15) saturate(1.25) brightness(1.03) sepia(0.12);
+}
+.photo-warm-container {
+  position: relative;
+}
+.photo-warm-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 80px 20px rgba(30, 25, 21, 0.15);
+  background: linear-gradient(135deg, rgba(162, 88, 75, 0.06) 0%, rgba(182, 135, 102, 0.1) 100%);
+  pointer-events: none;
+}
+
+/* Photo hover zoom */
+.photo-zoom {
+  overflow: hidden;
+}
+.photo-zoom img {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.photo-zoom:hover img {
+  transform: scale(1.04);
+}
+
+/* Card hover lift */
 .card-lift {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .card-lift:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(27, 79, 114, 0.12);
+  transform: translateY(-5px);
+  box-shadow:
+    0 4px 12px rgba(155, 79, 70, 0.06),
+    0 16px 40px rgba(30, 25, 21, 0.08);
 }
 
-/* Button pulse */
-@keyframes btn-pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(27, 79, 114, 0.4); }
-  50%       { box-shadow: 0 0 0 10px rgba(27, 79, 114, 0); }
-}
-.btn-pulse { animation: btn-pulse 2.5s ease infinite; }
-
-/* Float (WhatsApp) */
+/* WhatsApp float */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-6px); }
+  50% { transform: translateY(-6px); }
 }
 .float { animation: float 3s ease-in-out infinite; }
 
-/* ── Temas ── */
-[data-theme="opcao-a"] body,
-[data-theme="opcao-a"] p,
-[data-theme="opcao-a"] li,
-[data-theme="opcao-a"] span:not(.text-\[\#1B4F72\]):not(.text-\[\#C9A84C\]):not(.text-\[\#6B7280\]):not([class*="text-blue"]):not([class*="text-white"]) {
-  color: #0D2B3E;
-}
-[data-theme="opcao-a"] .text-\[\#1a1a1a\] { color: #0D2B3E !important; }
-[data-theme="opcao-a"] footer { background-color: #0D2B3E !important; }
+/* ── Reduced motion ── */
 
-[data-theme="opcao-b"] .text-\[\#1a1a1a\] { color: #2D3748 !important; }
-[data-theme="opcao-b"] footer { background-color: #2D3748 !important; }
-
-[data-theme="opcao-c"] .text-\[\#1a1a1a\] { color: #1B4F72 !important; }
-[data-theme="opcao-c"] footer { background-color: #154060 !important; }
-
-/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .reveal, .reveal-left, .reveal-right, .reveal-scale {
     opacity: 1;
     transform: none;
     transition: none;
   }
-  .btn-pulse { animation: none; }
-  .float     { animation: none; }
+  .float { animation: none; }
 }

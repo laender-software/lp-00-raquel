@@ -6,15 +6,13 @@ interface Props {
   description?: string;
   canonical?: string;
   ogImage?: string;
-  themeOverride?: string;
 }
 
 const {
-  title = 'Dra. Raquel Cosso — Endocrinologista',
-  description = 'Endocrinologista com atendimento humanizado e personalizado. Especialidades: tireoide, diabetes, obesidade, SOP, menopausa e mais. Agende sua consulta.',
+  title = 'Dra. Raquel Cosso — Endocrinologista e Metabologista',
+  description = 'Endocrinologista em Belo Horizonte com atendimento humanizado e personalizado. Tireoide, diabetes, obesidade, SOP, menopausa e mais. Agende sua consulta.',
   canonical = 'https://raquelcosso.com.br',
   ogImage = '/og-image.jpg',
-  themeOverride = '',
 } = Astro.props;
 ---
 <!doctype html>
@@ -26,15 +24,15 @@ const {
     <link rel="canonical" href={canonical} />
 
     <!-- OG / Twitter -->
-    <meta property="og:title"       content={title} />
+    <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image"       content={ogImage} />
-    <meta property="og:type"        content="website" />
-    <meta property="og:locale"      content="pt_BR" />
-    <meta name="twitter:card"       content="summary_large_image" />
-    <meta name="twitter:title"      content={title} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image"      content={ogImage} />
+    <meta name="twitter:image" content={ogImage} />
 
     <!-- JSON-LD -->
     <script type="application/ld+json">
@@ -43,22 +41,35 @@ const {
         "@type": "Physician",
         "name": "Dra. Raquel Cosso",
         "medicalSpecialty": "Endocrinology",
-        "description": "Endocrinologista com atendimento humanizado e personalizado.",
+        "description": "Endocrinologista e Metabologista em Belo Horizonte. Atendimento humanizado e personalizado.",
         "url": "https://raquelcosso.com.br",
-        "sameAs": ["https://www.instagram.com/raquelcosso"]
+        "telephone": "+553199972136",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. do Contorno, 8000 — Sala 1012",
+          "addressLocality": "Belo Horizonte",
+          "addressRegion": "MG",
+          "addressCountry": "BR",
+          "postalCode": "30110-012"
+        }
       }
     </script>
 
-    {themeOverride && <style set:html={themeOverride} />}
     <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-    <!-- Scroll Reveal JS -->
+    <!-- Scroll reveal + header + mobile menu -->
     <script is:inline>
       document.addEventListener('DOMContentLoaded', () => {
+        // Scroll reveal
         const els = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
         const obs = new IntersectionObserver((entries) => {
-          entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              e.target.classList.add('visible');
+              obs.unobserve(e.target);
+            }
+          });
         }, { threshold: 0.12 });
         els.forEach(el => obs.observe(el));
 
@@ -83,7 +94,7 @@ const {
         }, { threshold: 0.5 });
         counters.forEach(el => counterObs.observe(el));
 
-        // Navbar scroll
+        // Header scroll
         const header = document.querySelector('header');
         window.addEventListener('scroll', () => {
           header?.classList.toggle('scrolled', window.scrollY > 20);

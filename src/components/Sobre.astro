@@ -1,0 +1,59 @@
+---
+import sobreImg from '../assets/images/raquel-portrait-desk.jpeg';
+---
+
+<section class="py-24 lg:py-32 bg-bg-warm" id="sobre">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <!-- Photo -->
+      <div class="reveal-left">
+        <div class="relative photo-zoom rounded-2xl">
+          <img
+            src={sobreImg.src}
+            alt="Dra. Raquel Cosso sentada em seu consultório"
+            width="560"
+            height="680"
+            class="photo-editorial rounded-2xl object-cover object-top w-full aspect-[4/5]
+                   shadow-[0_8px_32px_rgba(30,25,21,0.1),0_2px_8px_rgba(30,25,21,0.06)]"
+            loading="lazy"
+            decoding="async"
+          />
+          <!-- Gold accent line -->
+          <div class="absolute -bottom-3 -right-3 w-24 h-24 border-r-2 border-b-2 border-accent/30 rounded-br-2xl" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="reveal-right">
+        <p class="text-xs font-semibold uppercase tracking-[0.15em] text-accent mb-4">
+          Quem sou eu
+        </p>
+
+        <h2 class="font-serif text-[clamp(1.75rem,3.5vw,2.5rem)] font-semibold leading-[1.15] tracking-[-0.02em] text-text mb-6">
+          A endocrinologia me escolheu antes de eu saber que seguiria na área da saúde
+        </h2>
+
+        <div class="space-y-4 text-base leading-[1.8] text-muted">
+          <p>
+            Sou filha de endocrinologista dessas apaixonadas pelo que faz. Logo na infância,
+            durante viagens de férias, escutava histórias de pacientes convivendo com doenças
+            raras como a Acromegalia e Doença de Cushing.
+          </p>
+          <p>
+            Aprendi o que eram os hormônios em primeira mão, antes mesmo das aulas de biologia
+            sobre o sistema endócrino. Com o passar dos anos, todo esse contato com a especialidade
+            despertou minha verdadeira curiosidade e admiração pelos pacientes endocrinológicos.
+          </p>
+          <p>
+            Hoje sigo nessa especialidade muito realizada e me dedico para cuidar bem de todos
+            aqueles que confiam em mim a sua saúde.
+            <span class="text-primary font-medium">É uma verdadeira alegria compartilhar este amor em família!</span>
+          </p>
+        </div>
+
+        <!-- Gold divider -->
+        <div class="w-12 h-0.5 bg-gradient-to-r from-accent to-accent-light rounded-full mt-8" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+</section>

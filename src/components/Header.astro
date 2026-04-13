@@ -1,0 +1,95 @@
+---
+const navLinks = [
+  { label: 'Sobre', href: '#sobre' },
+  { label: 'Especialidades', href: '#especialidades' },
+  { label: 'Atendimento', href: '#atendimento' },
+  { label: 'Formação', href: '#formacao' },
+  { label: 'FAQ', href: '#faq' },
+];
+---
+
+<header
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+  id="site-header"
+>
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <!-- Logo / Name -->
+    <a href="/" class="flex flex-col leading-none group">
+      <span class="font-serif text-lg font-semibold tracking-tight text-text group-hover:text-primary transition-colors">
+        Dra. Raquel Cosso
+      </span>
+      <span class="text-[0.6875rem] font-sans font-medium tracking-[0.12em] uppercase text-muted">
+        Endocrinologia
+      </span>
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden lg:flex items-center gap-8" aria-label="Navegação principal">
+      {navLinks.map(link => (
+        <a
+          href={link.href}
+          class="text-sm font-medium text-muted hover:text-primary transition-colors duration-200"
+        >
+          {link.label}
+        </a>
+      ))}
+      <a
+        href="#contato"
+        class="inline-flex items-center px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold
+               hover:bg-primary-dark focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2
+               active:scale-[0.97] transition-all duration-200"
+      >
+        Agendar Consulta
+      </a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button
+      id="menu-toggle"
+      class="lg:hidden flex flex-col gap-1.5 p-2 -mr-2"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+      aria-controls="mobile-nav"
+    >
+      <span class="block w-6 h-0.5 bg-text rounded-full transition-transform origin-center" id="bar-1"></span>
+      <span class="block w-6 h-0.5 bg-text rounded-full transition-opacity" id="bar-2"></span>
+      <span class="block w-4 h-0.5 bg-text rounded-full transition-transform origin-center" id="bar-3"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Nav -->
+  <nav
+    id="mobile-nav"
+    class="hidden lg:hidden bg-bg/95 backdrop-blur-md border-t border-border"
+    aria-label="Menu mobile"
+  >
+    <div class="px-6 py-6 flex flex-col gap-4">
+      {navLinks.map(link => (
+        <a
+          href={link.href}
+          class="text-base font-medium text-text hover:text-primary transition-colors py-1"
+        >
+          {link.label}
+        </a>
+      ))}
+      <a
+        href="#contato"
+        class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-primary text-white text-sm font-semibold
+               hover:bg-primary-dark transition-colors mt-2"
+      >
+        Agendar Consulta
+      </a>
+    </div>
+  </nav>
+</header>
+
+<style>
+  header {
+    background: transparent;
+  }
+  header.scrolled {
+    background: rgba(253, 250, 247, 0.92);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 1px 3px rgba(30, 25, 21, 0.06);
+  }
+</style>

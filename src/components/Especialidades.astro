@@ -1,0 +1,90 @@
+---
+const especialidades = [
+  { title: 'Obesidade e Emagrecimento', desc: 'Acompanhamento individualizado com foco em qualidade de vida.',
+    icon: `<path d="M12 3v1m0 16v1m-7.07-2.93l.71-.71M4.22 4.22l.71.71M3 12h1m16 0h1m-2.93 7.07l-.71-.71M19.78 4.22l-.71.71"/><circle cx="12" cy="12" r="4"/>` },
+  { title: 'Diabetes Mellitus', desc: 'Diagnóstico, tratamento e acompanhamento com abordagem integral.',
+    icon: `<path d="M12 2C12 2 5 9 5 14a7 7 0 0014 0c0-5-7-12-7-12z"/><path d="M10 14.5l2 2 4-4"/>` },
+  { title: 'Colesterol e Risco Cardiovascular', desc: 'Avaliação e manejo dos fatores de risco para doenças do coração.',
+    icon: `<path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/>` },
+  { title: 'Hipotireoidismo e Hipertireoidismo', desc: 'Tratamento das alterações da tireoide que afetam energia, peso e bem-estar.',
+    icon: `<path d="M9 18h6M12 2v1m0 18v1"/><path d="M7 7c0-1 .5-3 5-3s5 2 5 3c0 3-2 5-3 7h-4c-1-2-3-4-3-7z"/><circle cx="12" cy="14" r="2"/>` },
+  { title: 'Nódulos e Câncer de Tireoide', desc: 'Investigação e acompanhamento especializado de nódulos tireoidianos.',
+    icon: `<circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><circle cx="11" cy="11" r="3"/>` },
+  { title: 'Síndrome dos Ovários Policísticos', desc: 'Abordagem personalizada da SOP, incluindo irregularidade menstrual e acne.',
+    icon: `<circle cx="12" cy="8" r="5"/><path d="M12 13v8m-3-3h6"/>` },
+  { title: 'Climatério e Menopausa', desc: 'Cuidado com as transformações hormonais dessa fase com atenção e acolhimento.',
+    icon: `<path d="M12 22c4-4 8-7.5 8-12a8 8 0 10-16 0c0 4.5 4 8 8 12z"/><path d="M12 6v6l3 3"/>` },
+  { title: 'Osteoporose e Saúde Óssea', desc: 'Prevenção e tratamento da perda óssea para manter sua qualidade de vida.',
+    icon: `<path d="M8 2v4l-2 2v4l2 2v4l-2 2"/><path d="M16 2v4l2 2v4l-2 2v4l2 2"/>` },
+  { title: 'Paratireoide', desc: 'Diagnóstico e acompanhamento do hiper e hipoparatireoidismo.',
+    icon: `<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>` },
+  { title: 'Hipófise e Adrenais', desc: 'Investigação de doenças relacionadas à hipófise e às glândulas adrenais.',
+    icon: `<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/>` },
+];
+---
+
+<section class="py-24 lg:py-32 bg-bg" id="especialidades">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- Intro educativa (copy da Raquel) -->
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <div class="reveal">
+        <p class="text-xs font-semibold uppercase tracking-[0.15em] text-accent mb-4">
+          Endocrinologia &amp; Metabologia
+        </p>
+
+        <h2 class="font-serif text-[clamp(1.75rem,3.5vw,2.5rem)] font-semibold leading-[1.15] tracking-[-0.02em] text-text mb-8">
+          O que faz o endocrinologista?
+        </h2>
+      </div>
+
+      <div class="reveal space-y-4 text-base leading-[1.8] text-muted">
+        <p>
+          O endocrinologista é o especialista responsável pelo diagnóstico, tratamento e acompanhamento
+          de condições relacionadas ao desequilíbrio hormonal e metabólico. Os hormônios atuam na regulação
+          do apetite, metabolismo, pressão arterial, saúde reprodutiva, saúde óssea e ciclo do sono.
+        </p>
+        <p>
+          Alterações hormonais podem impactar significativamente a sua qualidade de vida. O acompanhamento
+          é fundamental não apenas para o controle das doenças, mas também para sua
+          <span class="text-primary font-medium">prevenção e promoção da saúde a longo prazo</span>.
+        </p>
+      </div>
+
+      <!-- Gold divider -->
+      <div class="flex justify-center mt-10" aria-hidden="true">
+        <div class="w-12 h-0.5 bg-gradient-to-r from-accent to-accent-light rounded-full"></div>
+      </div>
+    </div>
+
+    <!-- 10 especialidades -->
+    <div class="reveal">
+      <p class="text-center text-xs font-semibold uppercase tracking-[0.15em] text-accent mb-8">
+        Áreas de atuação
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {especialidades.map((esp) => (
+        <div class="reveal card-lift group bg-white rounded-xl px-6 py-5 border border-border/60
+                    shadow-[0_1px_3px_rgba(30,25,21,0.03)]
+                    hover:border-accent/40 transition-colors duration-200">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-bg-warm flex items-center justify-center mt-0.5">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <Fragment set:html={esp.icon} />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-sans text-[0.9375rem] font-semibold text-text mb-1 group-hover:text-primary transition-colors">
+                {esp.title}
+              </h3>
+              <p class="text-sm leading-relaxed text-muted">
+                {esp.desc}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
