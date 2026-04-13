@@ -11,7 +11,7 @@ interface Props {
 const {
   title = 'Dra. Raquel Cosso — Endocrinologista e Metabologista',
   description = 'Endocrinologista em Belo Horizonte com atendimento humanizado e personalizado. Tireoide, diabetes, obesidade, SOP, menopausa e mais. Agende sua consulta.',
-  canonical = 'https://raquelcosso.com.br',
+  canonical = 'https://site-raquel-vert.vercel.app',
   ogImage = '/og-image.jpg',
 } = Astro.props;
 ---
@@ -27,7 +27,7 @@ const {
     <meta property="og:url" content={canonical} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={ogImage} />
+    <meta property="og:image" content={`${canonical}${ogImage}`} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
     <meta name="twitter:card" content="summary_large_image" />
