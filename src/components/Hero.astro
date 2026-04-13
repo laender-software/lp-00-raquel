@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import heroImg from '../assets/images/raquel-portrait-standing.jpeg';
 ---
 
@@ -47,16 +48,18 @@ import heroImg from '../assets/images/raquel-portrait-standing.jpeg';
 
       <!-- Photo -->
       <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
-        <div class="reveal-scale relative">
+        <div class="relative">
           <!-- Soft background shape -->
           <div class="absolute -inset-4 bg-bg-warm rounded-[2rem] -z-10 rotate-2" aria-hidden="true"></div>
 
           <div class="photo-warm-container rounded-2xl w-[min(100%,400px)] lg:w-[440px]">
-            <img
-              src={heroImg.src}
+            <Image
+              src={heroImg}
               alt="Dra. Raquel Cosso, endocrinologista, em foto profissional lifestyle"
-              width="480"
-              height="560"
+              width={480}
+              height={640}
+              format="webp"
+              quality={85}
               class="photo-warm rounded-2xl object-cover object-top w-full aspect-[3/4]
                      shadow-[0_8px_32px_rgba(30,25,21,0.1),0_2px_8px_rgba(30,25,21,0.06)]"
               loading="eager"

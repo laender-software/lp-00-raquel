@@ -1,0 +1,147 @@
+---
+/**
+ * Página auxiliar para gerar o OG image via screenshot.
+ * Abrir em localhost:4321/og e tirar screenshot em 1200x630.
+ * Depois salvar como public/og-image.jpg e deletar esta página.
+ */
+import heroImg from '../assets/images/raquel-portrait-standing.jpeg';
+---
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Outfit:wght@400;500;600&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      font-family: 'Outfit', sans-serif;
+      background: #FDFAF7;
+      display: flex;
+    }
+
+    .left {
+      flex: 1;
+      padding: 60px 56px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    /* Gold geometric accent */
+    .left::before {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 40px;
+      width: 80px;
+      height: 80px;
+      border: 1.5px solid rgba(182, 135, 102, 0.2);
+      transform: rotate(45deg);
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #B68766;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: #1E1915;
+      margin-bottom: 20px;
+    }
+
+    h1 em {
+      color: #A2584B;
+      font-style: italic;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      line-height: 1.6;
+      color: #7C7067;
+      max-width: 440px;
+      margin-bottom: 32px;
+    }
+
+    .credentials {
+      display: flex;
+      gap: 12px;
+    }
+
+    .badge {
+      font-size: 12px;
+      font-weight: 600;
+      color: #B68766;
+      border: 1.5px solid rgba(182, 135, 102, 0.3);
+      border-radius: 999px;
+      padding: 8px 16px;
+      letter-spacing: 0.05em;
+    }
+
+    .right {
+      width: 420px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      filter: contrast(1.1) saturate(1.15) sepia(0.08);
+    }
+
+    /* Gradient overlay on photo edge */
+    .right::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 80px;
+      height: 100%;
+      background: linear-gradient(90deg, #FDFAF7 0%, transparent 100%);
+      z-index: 1;
+    }
+
+    /* Gold accent bar */
+    .gold-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #A2584B, #B68766, #D4A574);
+    }
+  </style>
+</head>
+<body>
+  <div class="left">
+    <p class="eyebrow">Endocrinologia &amp; Metabologia</p>
+    <h1>Dra. Raquel<br/>Cosso</h1>
+    <p class="subtitle">Atendimento médico individualizado, acolhedor e pautado em evidências científicas.</p>
+    <div class="credentials">
+      <span class="badge">CRM-MG 82239</span>
+      <span class="badge">Belo Horizonte</span>
+    </div>
+  </div>
+  <div class="right">
+    <img src={heroImg.src} alt="" />
+  </div>
+  <div class="gold-bar"></div>
+</body>
+</html>

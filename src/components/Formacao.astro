@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import formImg from '../assets/images/raquel-hospital-jaleco.jpeg';
 
 const credenciais = [
@@ -47,13 +48,15 @@ const credenciais = [
       </div>
 
       <!-- Photo (left on desktop) -->
-      <div class="reveal-left order-1">
+      <div class="order-1">
         <div class="relative photo-zoom rounded-2xl">
-          <img
-            src={formImg.src}
+          <Image
+            src={formImg}
             alt="Dra. Raquel Cosso com jaleco no Hospital Madre Teresa"
-            width="480"
-            height="600"
+            width={480}
+            height={640}
+            format="webp"
+            quality={80}
             class="photo-editorial rounded-2xl object-cover object-top w-full aspect-[3/4]
                    shadow-[0_8px_32px_rgba(0,0,0,0.3)]"
             loading="lazy"

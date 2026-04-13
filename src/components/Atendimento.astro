@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import atenImg from '../assets/images/raquel-portrait-office-chair.jpeg';
 ---
 
@@ -34,13 +35,15 @@ import atenImg from '../assets/images/raquel-portrait-office-chair.jpeg';
       </div>
 
       <!-- Photo -->
-      <div class="reveal-right">
+      <div>
         <div class="relative photo-zoom rounded-2xl">
-          <img
-            src={atenImg.src}
+          <Image
+            src={atenImg}
             alt="Dra. Raquel Cosso em atendimento no consultório"
-            width="560"
-            height="680"
+            width={560}
+            height={700}
+            format="webp"
+            quality={80}
             class="photo-editorial rounded-2xl object-cover object-top w-full aspect-[4/5]
                    shadow-[0_8px_32px_rgba(30,25,21,0.1),0_2px_8px_rgba(30,25,21,0.06)]"
             loading="lazy"
