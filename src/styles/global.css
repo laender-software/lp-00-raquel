@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Bloqueia auto-dark-mode de navegadores mobile (Chrome/Samsung) */
+html {
+  color-scheme: light only;
+}
+
 /* ── Fonts (self-hosted woff2, variable) ── */
 
 @font-face {
