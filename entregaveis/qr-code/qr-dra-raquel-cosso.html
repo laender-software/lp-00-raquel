@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Consultório — Dra. Raquel Cosso</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 48px;
+      background: #FDFAF7;
+      font-family: Georgia, "Times New Roman", serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .card {
+      width: 350px;
+      background: #FFFFFF;
+      border-radius: 20px;
+      padding: 48px 40px;
+      text-align: center;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .name {
+      font-family: Georgia, serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #A2584B;
+      line-height: 1.3;
+    }
+
+    .specialty {
+      font-family: system-ui, sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      color: #64748B;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-top: 6px;
+    }
+
+    .divider {
+      width: 40px;
+      height: 2px;
+      background: #B68766;
+      margin: 24px auto;
+      border-radius: 1px;
+    }
+
+    .qr { width: 200px; height: 200px; margin: 0 auto; }
+    .qr img { width: 100%; height: 100%; display: block; }
+
+    .cta {
+      font-family: system-ui, sans-serif;
+      margin-top: 24px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #A2584B;
+    }
+
+    @media print {
+      body { min-height: auto; margin: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <p class="name">Dra. Raquel Cosso</p>
+    <p class="specialty">Endocrinologia</p>
+    <div class="divider"></div>
+    <div class="qr">
+      <img src="data:image/png;base64,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" alt="QR Code — draraquelcosso.com.br" />
+    </div>
+    <p class="cta">draraquelcosso.com.br</p>
+  </div>
+</body>
+</html>
