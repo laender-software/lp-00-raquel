@@ -3,11 +3,11 @@ import { Image } from 'astro:assets';
 import atenImg from '../assets/images/raquel-portrait-office-chair.jpeg';
 ---
 
-<section class="py-24 lg:py-32 bg-bg-warm" id="atendimento">
+<section class="py-24 lg:py-32 bg-bg" id="atendimento">
   <div class="max-w-7xl mx-auto px-6">
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
       <!-- Text -->
-      <div class="reveal">
+      <div class="reveal order-1 lg:order-2">
         <p class="text-xs font-semibold uppercase tracking-[0.15em] text-accent mb-4">
           Como é o meu atendimento
         </p>
@@ -46,7 +46,7 @@ import atenImg from '../assets/images/raquel-portrait-office-chair.jpeg';
       </div>
 
       <!-- Photo -->
-      <div>
+      <div class="order-2 lg:order-1">
         <div class="relative photo-zoom rounded-2xl">
           <Image
             src={atenImg}
