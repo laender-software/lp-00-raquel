@@ -1,81 +1,81 @@
-# Home page do consultorio
+# Home page do consultório
 
 > Fonte: `home_page_consultorio_raquel_cosso.docx` (convertido em 2026-04-13)
 
 ---
 
-## 1. Secao principal
+## 1. Seção principal
 
 **Dra. Raquel Cosso**
 CRM-MG 82239 | RQE 68237
 
-Endocrinologia para quem busca saude, qualidade de vida e transformacao.
+Endocrinologia para quem busca saúde, qualidade de vida e transformação.
 
-Acredito em um atendimento medico individualizado, acolhedor e pautado em evidencias cientificas.
+Acredito em um atendimento médico individualizado, acolhedor e pautado em evidências científicas.
 
 ---
 
 ## 2. Quem sou eu?
 
-Brinco que a Endocrinologia me escolheu muito antes de saber que seguiria meu caminho profissional na area da saude! E isso mesmo... A endocrinologia me escolheu, e nao o contrario! Sou filha de endocrinologista dessas apaixonadas pelo que faz. Logo na infancia, durante viagens de ferias, escutava historias de pacientes convivendo com doencas raras como a Acromegalia e Doenca de Cushing. Aprendi o que eram os hormonios em primeira mao, antes mesmo das aulas de biologia sobre o sistema endocrino. Com o passar dos anos, todo esse contato com a especialidade despertou minha verdadeira curiosidade e admiracao pelos pacientes endocrinologicos! Hoje sigo nessa especialidade muito realizada e me dedico para cuidar bem de todos aqueles que confiam em mim a sua saude. E uma verdadeira alegria compartilhar este amor em familia!
+Brinco que a Endocrinologia me escolheu muito antes de saber que seguiria meu caminho profissional na área da saúde! E isso mesmo... A endocrinologia me escolheu, e não o contrário! Sou filha de endocrinologista dessas apaixonadas pelo que faz. Logo na infância, durante viagens de férias, escutava histórias de pacientes convivendo com doenças raras como a Acromegalia e Doença de Cushing. Aprendi o que eram os hormônios em primeira mão, antes mesmo das aulas de biologia sobre o sistema endócrino. Com o passar dos anos, todo esse contato com a especialidade despertou minha verdadeira curiosidade e admiração pelos pacientes endocrinológicos! Hoje sigo nessa especialidade muito realizada e me dedico para cuidar bem de todos aqueles que confiam em mim a sua saúde. É uma verdadeira alegria compartilhar este amor em família!
 
 ---
 
-## 3. Minha formacao
+## 3. Minha formação
 
-- Graduada em Medicina pela Faculdade de Ciencias Medicas de Minas Gerais.
-- Residencia em Clinica Medica pela Santa Casa de Belo Horizonte.
-- Residencia em Endocrinologia e Metabologia pela Santa Casa de Belo Horizonte.
-- Atualmente faco parte da equipe de endocrinologia do Hospital Madre Teresa e atuo como preceptora do programa de residencia medica deste hospital.
-- Ja trabalhei como medica clinica na Santa Casa de Belo Horizonte.
+- Graduada em Medicina pela Faculdade de Ciências Médicas de Minas Gerais.
+- Residência em Clínica Médica pela Santa Casa de Belo Horizonte.
+- Residência em Endocrinologia e Metabologia pela Santa Casa de Belo Horizonte.
+- Atualmente faço parte da equipe de endocrinologia do Hospital Madre Teresa e atuo como preceptora do programa de residência médica deste hospital.
+- Já trabalhei como médica clínica na Santa Casa de Belo Horizonte.
 
 ---
 
-## 4. Areas de atuacao
+## 4. Áreas de atuação
 
-- Obesidade e emagrecimento saudavel
+- Obesidade e emagrecimento saudável
 - Diabetes mellitus
-- Avaliacao do colesterol e de risco cardiovascular
+- Avaliação do colesterol e de risco cardiovascular
 - Hipotireoidismo e hipertireoidismo
-- Nodulos e cancer de tireoide
-- Sindrome dos ovarios policisticos
-- Climaterio e menopausa
-- Osteoporose e saude ossea
+- Nódulos e câncer de tireoide
+- Síndrome dos ovários policísticos
+- Climatério e menopausa
+- Osteoporose e saúde óssea
 - Hiperparatireoidismo e hipoparatireoidismo
-- Doencas relacionadas a hipofise e as adrenais
+- Doenças relacionadas à hipófise e às adrenais
 
 ---
 
-## 5. Como e o meu atendimento
+## 5. Como é o meu atendimento
 
-A primeira consulta tem como objetivo oferecer um atendimento personalizado e humanizado. Meu foco e olhar para voce como um todo. Para isso, vamos conversar sobre sua historia clinica, seus sintomas e abordaremos outros fatores que influenciam diretamente na sua saude metabolica e hormonal. Vamos analisar seus habitos de vida, sua rotina, sua alimentacao, qualidade do sono e como tudo isso pode interferir na sua qualidade de vida. Vou avaliar seus exames anteriores quando houver e propor novos exames caso seja necessario. Ao final do atendimento, vamos construir juntos um plano terapeutico que esteja alinhado com a sua realidade e suas necessidades.
+A primeira consulta tem como objetivo oferecer um atendimento personalizado e humanizado. Meu foco é olhar para você como um todo. Para isso, vamos conversar sobre sua história clínica, seus sintomas e abordaremos outros fatores que influenciam diretamente na sua saúde metabólica e hormonal. Vamos analisar seus hábitos de vida, sua rotina, sua alimentação, qualidade do sono e como tudo isso pode interferir na sua qualidade de vida. Vou avaliar seus exames anteriores quando houver e propor novos exames caso seja necessário. Ao final do atendimento, vamos construir juntos um plano terapêutico que esteja alinhado com a sua realidade e suas necessidades.
 
 ---
 
 ## 6. O que faz o endocrinologista
 
-O endocrinologista e o especialista responsavel pelo diagnostico, tratamento e acompanhamento de condicoes relacionadas ao desequilibrio hormonal e metabolico. Os hormonios sao substancias produzidas pelo nosso organismo que atuam na regulacao de multiplas funcoes biologicas. Eles estao envolvidos, por exemplo, no controle do apetite, do metabolismo glicemico, da pressao arterial, do equilibrio hidroeletrolitico, da saude sexual e reprodutiva, da saude ossea, do ciclo sono-vigilia, dentre muitas outras funcoes. Por isso, alteracoes hormonais podem se manifestar de formas variadas e impactar significativamente a saude, o bem-estar e a qualidade de vida. Nesse contexto, o acompanhamento com o endocrinologista e fundamental nao apenas para o diagnostico e o controle das doencas, mas tambem para sua prevencao e para a promocao da saude a longo prazo.
+O endocrinologista é o especialista responsável pelo diagnóstico, tratamento e acompanhamento de condições relacionadas ao desequilíbrio hormonal e metabólico. Os hormônios são substâncias produzidas pelo nosso organismo que atuam na regulação de múltiplas funções biológicas. Eles estão envolvidos, por exemplo, no controle do apetite, do metabolismo glicêmico, da pressão arterial, do equilíbrio hidroeletrolítico, da saúde sexual e reprodutiva, da saúde óssea, do ciclo sono-vigília, dentre muitas outras funções. Por isso, alterações hormonais podem se manifestar de formas variadas e impactar significativamente a saúde, o bem-estar e a qualidade de vida. Nesse contexto, o acompanhamento com o endocrinologista é fundamental não apenas para o diagnóstico e o controle das doenças, mas também para sua prevenção e para a promoção da saúde a longo prazo.
 
 ---
 
 ## 7. Perguntas frequentes
 
-### Quais condicoes voce acompanha?
+### Quais condições você acompanha?
 
-Acompanho diversas condicoes dentro da Endocrinologia, sendo as mais frequentes diabetes, obesidade, colesterol elevado, climaterio e menopausa, osteoporose e doencas tireoidianas.
+Acompanho diversas condições dentro da Endocrinologia, sendo as mais frequentes diabetes, obesidade, colesterol elevado, climatério e menopausa, osteoporose e doenças tireoidianas.
 
 ### Preciso levar exames para a consulta?
 
-Leve todos os exames que tiver realizado. Eles podem contribuir de forma importante para a avaliacao inicial e, se necessario, sua investigacao podera ser complementada com novos exames.
+Leve todos os exames que tiver realizado. Eles podem contribuir de forma importante para a avaliação inicial e, se necessário, sua investigação poderá ser complementada com novos exames.
 
-### O tratamento endocrinologico envolve apenas medicacao?
+### O tratamento endocrinológico envolve apenas medicação?
 
-Nao. O acompanhamento endocrinologico vai muito alem do tratamento medicamentoso. E importante analisar os diversos fatores da vida diaria que podem interferir no processo de adoecimento, incluindo rotina, habitos alimentares, qualidade do sono, pratica de atividade fisica, saude mental e a forma como voce se relaciona com o mundo ao seu redor.
+Não. O acompanhamento endocrinológico vai muito além do tratamento medicamentoso. É importante analisar os diversos fatores da vida diária que podem interferir no processo de adoecimento, incluindo rotina, hábitos alimentares, qualidade do sono, prática de atividade física, saúde mental e a forma como você se relaciona com o mundo ao seu redor.
 
-### Voce tambem trabalha com longevidade e envelhecimento saudavel?
+### Você também trabalha com longevidade e envelhecimento saudável?
 
-A endocrinologia esta diretamente relacionada a prevencao e ao tratamento de condicoes cronicas que impactam de forma importante a saude e a qualidade de vida ao longo dos anos. Por isso, o acompanhamento endocrinologico tambem pode contribuir para um envelhecimento mais saudavel, com foco em prevencao, funcionalidade e bem-estar.
+A endocrinologia está diretamente relacionada à prevenção e ao tratamento de condições crônicas que impactam de forma importante a saúde e a qualidade de vida ao longo dos anos. Por isso, o acompanhamento endocrinológico também pode contribuir para um envelhecimento mais saudável, com foco em prevenção, funcionalidade e bem-estar.
 
-### Atende planos de saude?
+### Atende planos de saúde?
 
-No momento, o atendimento e realizado exclusivamente de forma particular. Essa escolha permite que a consulta aconteca com tempo e tranquilidade, permitindo uma avaliacao cuidadosa e o planejamento de um plano terapeutico adequado a cada paciente. Em muitos casos, tambem e possivel solicitar reembolso junto ao plano de saude.
+No momento, o atendimento é realizado exclusivamente de forma particular. Essa escolha permite que a consulta aconteça com tempo e tranquilidade, permitindo uma avaliação cuidadosa e o planejamento de um plano terapêutico adequado a cada paciente. Em muitos casos, também é possível solicitar reembolso junto ao plano de saúde.
